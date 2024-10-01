@@ -1,5 +1,4 @@
-
-## II. Ngôn ngữ Markdown
+# Markdown
 
 Ngôn ngữ này khá đơn giản, bạn có thể đọc tại [đây](http://daringfireball.net/projects/markdown/syntax) để biết cách sử dụng.
 
@@ -12,9 +11,7 @@ Một số phương pháp tôi hay sử dụng để viết:
 <a name="thetieude"></a>
 ### 1. Thẻ tiêu đề
 
-Markdown sử dụng kí tự # để bắt đầu cho các thẻ tiêu đề, có thể dùng từ 1 đến 6 ký tự # liên tiếp. Mức độ riêu đề giảm dần từ 1 đến 6
-
-Tùy mục đích và ý thích bạn có thể sử dụng cách này để thể hiện các chỉ mục khác nhau.
+Markdown sử dụng kí tự # để bắt đầu cho các thẻ tiêu đề, có thể dùng từ 1 đến 6 ký tự # liên tiếp.
 
 Ví dụ:
 
@@ -24,17 +21,7 @@ Ví dụ:
 
 # 1.Tiêu đề cấp 1
 
-```
-## 2.Tiêu đề cấp 2
-```
 
-## 2.Tiêu đề cấp 2
-
-```
-###### 6.Tiêu đề cấp 6
-```
-
-###### 6.Tiêu đề cấp 6
 
 <a name="chenlinkchenanh"></a>
 ### 2. Chèn link, chèn ảnh
