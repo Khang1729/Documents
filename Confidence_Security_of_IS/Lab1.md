@@ -1,5 +1,6 @@
 # Laboratory 1 - Penetration Testing bWAPP
 ## Introduction
+- bWAPP trang chính thức: http://www.itsecgames.com/
 - 
 ## Install bWAPP
 - bWAPP: https://github.com/dzokha1010/Documents/blob/main/bWAPPv2.2.zip
