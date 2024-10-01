@@ -10,8 +10,9 @@
 - cd HTTT2211
 ## Modify
 - Lưu file thay đổi: `git add .`
-- git commit -m "<ghi chú>"
-- git push -u origin <name_branch>
+- Ghi lại trạng thái thay đổi: `git commit -m "<ghi chú>"`
+- Đẩy những thay đổi từ máy tính lên Github: `push -u origin <name_branch>`
+- Đồng bộ từ Github về máy tính: `git pull`
 ## Managing remote repositories
 - git remote add origin https://github.com/dzokha1010/HTTT2211.git
 - git remote -v
