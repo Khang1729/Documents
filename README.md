@@ -4,7 +4,7 @@
 - Tạo mới Token để lưu trữ Source Code từ máy tính lên Github: https://github.com/settings/tokens/new
 - Lưu trữ Token để sử dụng mổi lần muốn lưu Source Code lên Github
 ## Install Git
-Download và Install Git: https://git-scm.com/downloads
+- Download và cài đặt Git trên máy tính: https://git-scm.com/downloads
 ## Clone Repository
 - git clone https://github.com/dzokha1010/HTTT2211.git
 - cd HTTT2211
