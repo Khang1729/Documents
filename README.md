@@ -17,9 +17,10 @@
 - git remote add origin https://github.com/dzokha1010/HTTT2211.git
 - git remote -v
 ## Config
-- git config -l
-- git config user.name <user_github>
-- git config user.email <mail_user_github>
+- Liệt kê thiết lập: `git config -l`
+- Thiết lập tài khoản Github: `git config user.name <user_github>`
+- Thiết lập email đã đăng ký trên Github: `git config user.email <mail_user_github>`
+- Lựa chọn trình soạn thảo mặc định: `git config --global core.editor vi`
 ## Branch
 - git branch -M <name_branch>
 - git checkout <name_branch>
