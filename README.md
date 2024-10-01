@@ -1,4 +1,7 @@
 # Documents
+## Github
+- Đăng ký github: https://github.com/
+- Tạo mới token: https://github.com/settings/tokens/new
 ## Install Git
 Download và Install Git: https://git-scm.com/downloads
 ## Clone Repository
