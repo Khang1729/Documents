@@ -6,8 +6,10 @@
 ## Install Git
 - Download và cài đặt Git trên máy tính: https://git-scm.com/downloads
 ## Clone Repository
-- git clone https://github.com/dzokha1010/HTTT2211.git
-- cd HTTT2211
+- Tải dữ liệu trên Github về: `git clone https://github.com/dzokha1010/HTTT2211.git`
+- Trong thư mục hiện tại đã có thư mục tải về, di chuyển vào thư mục tải về: `cd HTTT2211`
+- Hiển thị các file trong thư mục: `ls`
+- Hiển thị đường dẫn đến thư mục: `pwd`
 ## Modify
 - Lưu file thay đổi: `git add .`
 - Ghi lại trạng thái thay đổi: `git commit -m "<ghi chú>"`
