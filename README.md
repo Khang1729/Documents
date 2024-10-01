@@ -16,8 +16,10 @@
 - Đẩy những thay đổi từ máy tính lên Github: `push -u origin <name_branch>`
 - Đồng bộ từ Github về máy tính: `git pull`
 ## Managing remote repositories
-- git remote add origin https://github.com/dzokha1010/HTTT2211.git
-- git remote -v
+Để đẩy Folder từ máy tính lên Github mà không thực hiện clone, chúng ta thực hiện câu lệnh sau trong thư mục
+- Liên kết thư mục với repo muốn đưa Source Code lên: `git remote add origin https://github.com/dzokha1010/HTTT2211.git`
+- Liệt kê các liên kết đang sử dung: `git remote -v`
+- Đảy dữ liệu lên Github: `git push origin master`
 ## Config
 - Liệt kê thiết lập: `git config -l`
 - Thiết lập tài khoản Github: `git config user.name <user_github>`
