@@ -1,12 +1,11 @@
 # Markdown
+Tham khảo: http://daringfireball.net/projects/markdown/syntax
+## Mục lục
+[1. Thẻ tiêu đề](#thetieude)
+[2. Chèn link, hình](#chenlinkhinh)
 
-Ngôn ngữ này khá đơn giản, bạn có thể đọc tại [đây](http://daringfireball.net/projects/markdown/syntax) để biết cách sử dụng.
 
-Nhưng với tôi, tôi không dùng hết từng ấy thứ cho nên tôi chỉ nhớ một số cái tôi hay dùng, cách tôi dùng như sau:
 
-Tạo một file có tên bất kỳ với đuôi .md. Có thể dùng `notepad`, `notepad++`, `vi`, `nano`,... hay bất cứ thứ gì mà bạn muốn.
-
-Một số phương pháp tôi hay sử dụng để viết:
 
 <a name="thetieude"></a>
 ### 1. Thẻ tiêu đề
@@ -19,12 +18,8 @@ Ví dụ:
 # 1.Tiêu đề cấp 1
 ```
 
-# 1.Tiêu đề cấp 1
-
-
-
-<a name="chenlinkchenanh"></a>
-### 2. Chèn link, chèn ảnh
+<a name="chenlinkhinh"></a>
+### 2. Chèn link, hình
 
 Để chèn hyperlink bạn chỉ cần paste luôn linh đó vào file .md
 
@@ -32,17 +27,11 @@ Ví dụ:
 https://github.com
 ```
 
-https://github.com
-
 Hoặc bạn cũng có thể sử dụng cú pháp sau để thu ngắn đường dẫn của link
 
 ```
 [Github](https://github.com)
 ```
-
-Kết quả là:
-
-[Github](https://github.com)
 
 Để chèn ảnh thì bạn hãy sử dụng cú pháp sau:
 
@@ -50,9 +39,7 @@ Kết quả là:
 <img src="link_anh_cua_ban">
 ```
 
-Tôi thường sử dụng công cụ [Lightshot](https://app.prntscr.com/en/index.html) để chụp ảnh màn hình và up hình đó lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
-
-Hai công cụ này khá dễ sử dụng, bạn chỉ cần chụp màn hình bằng Lightshot ấn Ctrl + C để copy và Ctrl + V để paste vào trình duyệt tại trang web http://i.imgur.com/
+Bạn có thể up hình đó lên trang http://i.imgur.com/ để lấy đường dẫn ảnh đưa vào Github
 
 <a name=kytuindaminnghieng></a>
 ### 3. Ký tự in đậm, in nghiêng
@@ -63,15 +50,11 @@ Hai công cụ này khá dễ sử dụng, bạn chỉ cần chụp màn hình b
 **từ cần in đậm**
 ```
 
-**từ cần in đậm**
-
 - Để in nghiên một đoạn text  bạn chỉ cần làm như sau:
 
 ```
 *từ cần in nghiêng*
 ```
-
-*từ cần in nghiêng*
 
 <a name="trichdanbochu"></a>
 ### 4. Trích dẫn, bo chữ
@@ -81,8 +64,6 @@ Hai công cụ này khá dễ sử dụng, bạn chỉ cần chụp màn hình b
 ```
 `đoạn cần bo`
 ```
-
-Kết quả là: `đoạn cần bo`
 
 Để làm nổi bật một đoạn, chẳng hạn như một đoạn shell hay file cấu hình bạn có thể sử dụng cú pháp như ví dụ sau:
 
@@ -94,17 +75,6 @@ Kết quả là: `đoạn cần bo`
 	gateway 10.10.10.1
 	dns-nameservers 8.8.8.8
     ```
-
-Kết quả như sau:
-
-```sh
-auto eth0
-iface eth0 inet static
-ipaddress 10.10.10.10
-netmask 255.255.255.0
-gateway 10.10.10.1
-dns-nameservers 8.8.8.8
-```
 
 <a name="gachdaudong"></a>
 ### 5. Gạch đầu dòng
@@ -126,19 +96,6 @@ dns-nameservers 8.8.8.8
   
 ```
 
-- Gạch đầu dòng thứ nhất
-  
-  - Thụt với đầu dòng 1
-  
-  - Thụt với đầu dòng 1
-  
-- Gạch đầu dòng thứ hai
-  
-  - Thụt với đầu dòng 2
-  
-  - Thụt với đầu dòng 2
-  
-
 <a name="taobang"></a>
 ### 6. Tạo bảng
 
@@ -151,23 +108,6 @@ Bạn có thể sử dụng cú pháp sau để tạo bảng:
 | Hàng 3 | 3 x 1 | 3 x 2 | 3 x 3 | 3 x 4 |
 | Hàng 4 | 4 x 1 | 4 x 2 | 4 x 3 | 4 x 4 |
 ```
-
-Kết quả:
-
-| Cột 1 Hàng 1 | Cột 2 | Cột 3| Cột 4 |
-|--------------|-------|------|-------|
-| Hàng 2 | 2 x 1 | 2 x 2 | 2 x 3 | 2 x 4 |
-| Hàng 3 | 3 x 1 | 3 x 2 | 3 x 3 | 3 x 4 |
-| Hàng 4 | 4 x 1 | 4 x 2 | 4 x 3 | 4 x 4 |
-
-<a name="meo"></a>
-###*Mẹo:*
-
-- Sử dụng trang http://markdownlivepreview.com/ paste vào đó đoạn markdown bạn viết và xem trước để chỉnh sửa cho phù hợp.
-
-- Bạn cũng có thể sử dụng những đoạn markdown của người khác đã viết trước để tham khảo.
-
-Như vậy bạn đã có thể trình bày github của mình một cách sáng sủa bằng markdown.
 
 <a name="cacthaotacvoigitvagithub"></a>
 ## III. Các thao tác với Git và Github
