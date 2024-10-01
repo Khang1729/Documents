@@ -1,5 +1,7 @@
-# Laboratory 1
-## Penetration Testing bWAPP
+# Laboratory 1 - Penetration Testing bWAPP
+## Introduction
+- 
+## Install bWAPP
 - bWAPP: https://github.com/dzokha1010/Documents/blob/main/bWAPPv2.2.zip
 - Extract the 'zip' file
 - Move the directory 'bWAPP' (and the entire content) to the root of your web server.
