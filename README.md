@@ -24,3 +24,5 @@
 - git push -u origin <name_branch>
 ## Error 400
 - git config http.postBuffer 52428800
+## Markdown language
+- Tham khảo: http://daringfireball.net/projects/markdown/syntax
