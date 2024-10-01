@@ -2,8 +2,16 @@
 Tham khảo: http://daringfireball.net/projects/markdown/syntax
 ## Mục lục
 [1. Thẻ tiêu đề](#thetieude)
+
 [2. Chèn link, hình](#chenlinkhinh)
 
+[3. Ký tự in đậm, in nghiêng](#kytuindaminnghieng)
+
+[4. Trích dẫn, bo chữ](#trichdanbochu)
+
+[5. Gạch đầu dòng](#gachdaudong)
+
+[6. Tạo bảng](#taobang)
 
 
 
