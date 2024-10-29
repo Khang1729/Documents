@@ -4,6 +4,7 @@
 
 
 ## II. Practical Application
+
 Thử nghiệm các phương pháp mật mã đã học bằng công cụ online:
 
 Link 1: https://legacy.cryptool.org/en/cto/
