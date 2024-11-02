@@ -11,3 +11,9 @@
   Link 2: https://www.cryptool.org/en/cto/
 
   Link 3: https://cryptoknife.com/
+
+- Cài đặt SSL cho Website nội bộ:
+
+- 
+ Sinh viên có mặt: 2311055, 03, 04, 05, 07, 09, 14, 15L, 21, KMT221124, 25, 26, 31, 32, 36, 43, 44, 48, 57, 60
+  
