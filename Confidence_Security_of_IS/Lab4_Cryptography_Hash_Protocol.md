@@ -14,6 +14,8 @@
 
 - Cài đặt OpenSSL thiết lập giao thức SSL cho Website
 
+  Link: https://www.openssl.org/
+  
   Phiên bản cài đặt cho Windows: https://slproweb.com/products/Win32OpenSSL.html
 
   
