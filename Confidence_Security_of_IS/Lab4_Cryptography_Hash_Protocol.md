@@ -14,6 +14,8 @@
 
 - Cài đặt OpenSSL thiết lập giao thức SSL cho Website
 
+  Phiên bản cài đặt cho Windows: https://slproweb.com/products/Win32OpenSSL.html
+
   
  Sinh viên có mặt: 2311055, 03, 04, 05, 07, 09, 14, 15L, 16, 18, 21, KMT221124, 25, 26, 31, 32, 35, 36, 42, 43, 44, 48,53,55, 57, 60,28,
  
