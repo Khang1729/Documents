@@ -18,7 +18,7 @@
   
   Phiên bản cài đặt cho Windows: https://slproweb.com/products/Win32OpenSSL.html
 
-- Cấu hình SSL cho localhost
+  Cấu hình SSL cho localhost
 
   B1: Create Private Key
   ```
