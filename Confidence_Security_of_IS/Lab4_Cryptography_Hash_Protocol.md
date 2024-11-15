@@ -21,9 +21,9 @@
 - Cấu hình SSL cho localhost
 
 -- B1: Create Private Key
-'''
+```
 openssl genrsa -des3 -out rootSSL.key 2048
-'''
+```
 
 
   
