@@ -12,7 +12,9 @@
 
   Link 3: https://cryptoknife.com/
 
-- Cài đặt OpenSSL thiết lập giao thức SSL cho Website
+- Thiết lập Website trên localhost và dùng Wireshark bắt gói tin
+
+- Cài đặt OpenSSL thiết lập giao thức SSL cho Website và dùng Wireshark bắt gói tin
 
   Link: https://www.openssl.org/
   
