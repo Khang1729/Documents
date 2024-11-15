@@ -44,7 +44,7 @@
   ```
   B6:
   ```
-  <VirtualHost client-1.local>
+  <VirtualHost domain-new.local>
      DocumentRoot c:\xampp\htdocs\
      ServerName domain-new.local
      SSLEngine on
