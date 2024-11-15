@@ -18,6 +18,14 @@
   
   Phiên bản cài đặt cho Windows: https://slproweb.com/products/Win32OpenSSL.html
 
+- Cấu hình SSL cho localhost
+
+-- B1: Create Private Key
+'''
+openssl genrsa -des3 -out rootSSL.key 2048
+'''
+
+
   
  Sinh viên có mặt: 2311055, 03, 04, 05, 07, 09, 14, 15L, 16, 18, 21, KMT221124, 25, 26, 31, 32, 35, 36, 42, 43, 44, 48,53,55, 57, 60,28,
  
