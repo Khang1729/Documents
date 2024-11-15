@@ -64,6 +64,10 @@
   9.  Select “Trusted Root Certification Authorities”, right-click “Certificates” and select “All Tasks” then “Import”
   10.  Click “Next” then Browse and locate the “rootSSL.pem”
   11.  Select “Place all certificates in the following store” and select the “Trusted Root Certification Authorities store”. Click “Next” then click “Finish” to complete the wizard
+ 
+- Cài đặt FTP trên Windows và thử nghiệm truyền file và dùng Wireshark bắt gói tin
+
+- Cài đặt SSH trên Windows hoặc SSL cho FTP và thử nghiệm truyền file và dùng Wireshak bắt gói tin
   
  Sinh viên có mặt: 2311055, 03, 04, 05, 07, 09, 14, 15L, 16, 18, 21, KMT221124, 25, 26, 31, 32, 35, 36, 42, 43, 44, 48,53,55, 57, 60,28,
  
