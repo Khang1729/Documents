@@ -42,14 +42,14 @@
   ```
   openssl x509 -req -in domain-new.local.csr -CA rootSSL.pem -CAkey rootSSL.key -CAcreateserial -out domain-new.local.crt -days 500 -sha256 -extensions "authorityKeyIdentifier=keyid,issuer\n basicConstraints=CA:FALSE\n keyUsage = digitalSignature, nonRepudiation, keyEncipherment, dataEncipherment\n  subjectAltName=DNS:domain-new.local"
   ```
-  B6:
+  B6: Thêm đoạn sau vào xampp/apache/conf/extra/httpd-vhosts.conf
   ```
-  <VirtualHost domain-new.local>
-     DocumentRoot c:\xampp\htdocs\
-     ServerName domain-new.local
-     SSLEngine on
-     SSLCertificateFile f:/LDE/nginx/SSL/domain-new.local.crt
-     SSLCertificateKeyFile f:/LDE/nginx/SSL/domain-new.local.key;    
+  <VirtualHost *:443>
+    ServerName domain-new.local
+    DocumentRoot "C:/xampp/htdocs/"
+    SSLEngine on
+    SSLCertificateFile "C:\xampp\apache\conf\ssl.crt\domain-new.local.crt"
+    SSLCertificateKeyFile "C:\xampp\apache\conf\ssl.key\domain-new.local.key"
   </VirtualHost>
   ```
   B7: Get Windows to Trust the Certificate Authority
