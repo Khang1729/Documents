@@ -36,7 +36,7 @@
   localhost 127.0.0.1 domain-new.local
   ```
   B4: Create a Private Key for the New Domain.
-  Thêm dòng sau vào file hosts trong thư mục c:\program files\windows\system32\drivers\etc\
+  Thêm dòng sau vào file hosts trong thư mục c:\windows\system32\drivers\etc\
   ```
   openssl req -new -sha256 -nodes -out domain-new.local.csr -newkey rsa:2048 -keyout domain-new.local.key -subj "/C=US/ST=GA/L=Tifton/O=Client One/OU=Dev/CN=domain-new.local/emailAddress=hello@domain-new.local"
   ```
