@@ -77,6 +77,6 @@
 
  sinh viên xin vắng: 30
 
- Điểm danh buổi cuối: KHMT2211024, 18,43,04,31,25
+ Điểm danh buổi cuối: KHMT2211024, 18,43,04,31,25,03,15, 26,44,
  Sinh viên chưa xong: 32,28
   
