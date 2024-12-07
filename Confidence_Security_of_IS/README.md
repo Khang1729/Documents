@@ -16,5 +16,5 @@
 - Hướng dẫn thực hành: [Github](https://github.com/dzokha1010/Documents/blob/main/Confidence_Security_of_IS/Lab4_Cryptography_Hash_Protocol.md)
 - Lab4 thực hành 01 buổi 5 tiết
 ### Lab5 - Secure Communication Protocol
-- Hướng dẫn thực hành: [Github](https://github.com/dzokha1010/Documents/blob/main/Confidence_Security_of_IS/Lab4_Cryptography_Hash_Protocol.md)
+- Hướng dẫn thực hành: [Github](https://github.com/dzokha1010/Documents/blob/main/Confidence_Security_of_IS/Lab5_Secure_Communication_Protocol.md)
 - Lab4 thực hành 01 buổi 5 tiết
