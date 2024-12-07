@@ -12,6 +12,9 @@
 ### Lab3 - Malware Detection
 - Hướng dẫn thực hành: [Github](https://github.com/dzokha1010/Documents/blob/main/Confidence_Security_of_IS/Lab3_Malware_Detection.md)
 - Lab3 thực hành 01 buổi 5 tiết
-### Lab4 - Cryptography, Hash Function Applications and Secure Communication Protocol
+### Lab4 - Cryptography, Hash Function Applications
 - Hướng dẫn thực hành: [Github](https://github.com/dzokha1010/Documents/blob/main/Confidence_Security_of_IS/Lab4_Cryptography_Hash_Protocol.md)
-- Lab4 thực hành 02 buổi 10 tiết
+- Lab4 thực hành 01 buổi 5 tiết
+### Lab5 - Secure Communication Protocol
+- Hướng dẫn thực hành: [Github](https://github.com/dzokha1010/Documents/blob/main/Confidence_Security_of_IS/Lab4_Cryptography_Hash_Protocol.md)
+- Lab4 thực hành 01 buổi 5 tiết
