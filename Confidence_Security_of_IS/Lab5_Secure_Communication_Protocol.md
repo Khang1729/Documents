@@ -4,14 +4,6 @@
 
 
 ## II. Practical Application
-- Thử nghiệm các phương pháp mật mã đã học, thực hiện ký số và xác thực
-
-  Link 1: https://legacy.cryptool.org/en/cto/
-
-  Link 2: https://www.cryptool.org/en/cto/
-
-  Link 3: https://cryptoknife.com/
-
 - Thiết lập Website trên localhost và dùng Wireshark bắt gói tin
 
 - Cài đặt OpenSSL thiết lập giao thức SSL cho Website và dùng Wireshark bắt gói tin
