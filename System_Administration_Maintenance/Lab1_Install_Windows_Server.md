@@ -1,8 +1,11 @@
 # Laboratory 1 - Cài đặt HĐH Windows Server 2022
 ## Introduction
-- bWAPP là một Web được lập trình bằng PHP, sử dụng cơ sở dữ liệu MySQL và có hơn 100 lỗ hổng bảo mật Web. Nó giúp những người đam mê bảo mật, nhà phát triển và sinh viên khám phá các lỗ hổng bảo mật Web.
-- Website bWAPP : http://www.itsecgames.com/
-## Install Windows Server 2022
+- Windows Server 2022 Datacenter: Dành cho tổ chức cần môi trường ảo hóa cao và đám mây riêng. Hỗ trợ đầy đủ tính năng của Windows Server với số lượng máy ảo không giới hạn.
+- Windows Server 2022 Standard: Phù hợp với tổ chức có hệ thống vật lý hoặc ít máy ảo. Cung cấp đầy đủ tính năng Windows Server nhưng chỉ hỗ trợ tối đa 2 máy ảo.
+- Windows Server 2022 Azure Edition: Thiết kế riêng để chạy trên nền tảng đám mây Azure, hoạt động như một máy ảo trên Azure IaaS hoặc cụm Azure Stack HCI.
+- Windows Server 2022 Essentials: Lý tưởng cho doanh nghiệp nhỏ (tối đa 25 người dùng, 50 thiết bị). Giao diện đơn giản hơn, tích hợp sẵn kết nối với dịch vụ đám mây nhưng không hỗ trợ ảo hóa.
 - Windows Server 2022: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
+## Install Windows Server 2022
+- 
 - 
 
