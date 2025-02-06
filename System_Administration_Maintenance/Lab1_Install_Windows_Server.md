@@ -6,5 +6,8 @@
 - Windows Server 2022 Essentials: Lý tưởng cho doanh nghiệp nhỏ (tối đa 25 người dùng, 50 thiết bị). Giao diện đơn giản hơn, tích hợp sẵn kết nối với dịch vụ đám mây nhưng không hỗ trợ ảo hóa.
 ## Install Windows Server 2022
 - Windows Server 2022: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
-- 
+- Có 3 lựa chọn khi cài đặt
+1. Windows Server 2022 (Desktop Experience)
+2. Windows Server 2022 Server Core
+3. Windows Server 2022 Nano Server
 
