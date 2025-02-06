@@ -4,8 +4,7 @@
 - Windows Server 2022 Standard: Phù hợp với tổ chức có hệ thống vật lý hoặc ít máy ảo. Cung cấp đầy đủ tính năng Windows Server nhưng chỉ hỗ trợ tối đa 2 máy ảo.
 - Windows Server 2022 Azure Edition: Thiết kế riêng để chạy trên nền tảng đám mây Azure, hoạt động như một máy ảo trên Azure IaaS hoặc cụm Azure Stack HCI.
 - Windows Server 2022 Essentials: Lý tưởng cho doanh nghiệp nhỏ (tối đa 25 người dùng, 50 thiết bị). Giao diện đơn giản hơn, tích hợp sẵn kết nối với dịch vụ đám mây nhưng không hỗ trợ ảo hóa.
-- Windows Server 2022: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
 ## Install Windows Server 2022
-- 
+- Windows Server 2022: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
 - 
 
