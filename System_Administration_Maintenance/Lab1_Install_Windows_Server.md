@@ -10,4 +10,4 @@
 1. Windows Server 2022 (Desktop Experience)
 2. Windows Server 2022 Server Core
 3. Windows Server 2022 Nano Server
-
+- Hyper-V: https://learn.microsoft.com/en-us/windows-server/virtualization/hyper-v/get-started/install-hyper-v?pivots=windows
