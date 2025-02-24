@@ -20,10 +20,12 @@
 - Step 9: Click chuột phải vào Virtual Machine vừa tạo bên cửa sổ tay trái, Chọn Settings
 - Step 10: Click vào CD/DVD (SATA), chọn Use ISO image file và click Brower… để dẫn đến tập tin Windows Server 2022.ISO, Ok
 ## Installing Windows Server 2022
-- Windows Server 2022 có 03 chế độ cài là:
+Windows Server 2022 có 03 chế độ cài đặt:
   - Windows Server 2022 (Desktop Experience)
   - Windows Server 2022 Server Core
   - Windows Server 2022 Nano Server
+
+*Các bước cài Windows Server 2022 (Desktop Experience):*
 - Step 1: Click chuột phải vào Virtual Machine vừa tạo và bấm Powrer/Power On
 - Step 2: Click chuột vào màn hình màu đen và bấm phím bất kỳ để vào giao diện Windows Setup
 - Step 3: Tại giao diện Windows Setup, Next
