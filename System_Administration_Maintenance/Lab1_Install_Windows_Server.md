@@ -1,4 +1,4 @@
-# Laboratory 1 - Cài đặt HĐH Windows Server 2022
+# Laboratory 1 - Installing Windows Server 2022
 ## Introduction
 - Windows Server 2022 Datacenter: Dành cho tổ chức cần môi trường ảo hóa cao và đám mây riêng. Hỗ trợ đầy đủ tính năng của Windows Server với số lượng máy ảo không giới hạn.
 - Windows Server 2022 Standard: Phù hợp với tổ chức có hệ thống vật lý hoặc ít máy ảo. Cung cấp đầy đủ tính năng Windows Server nhưng chỉ hỗ trợ tối đa 2 máy ảo.
