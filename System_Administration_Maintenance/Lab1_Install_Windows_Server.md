@@ -8,6 +8,18 @@
 - Link Download: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
 ## Download VMware Workstation
 - Link Dowload: https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
+## Create Virtual Machine
+- Step 1: Khởi động VMware Workstation Pro
+- Step 2: File/Mew Virtual Machine
+- Step 3: Chọn Typical, Next
+- Step 4: Chọn I will install the operating system later, Next
+- Step 5: Chọn Microsoft Windows, chọn Version: Windows Server 2022, Next
+- Step 6: Đặt tên Virtual machine, nên đặt tên dễ nhớ để thực hành các buổi sau, chọn đường dẫn lưu trữ đến ổ D, Next
+B7: Chọn Maximum disk size 60GB, Chọn Split virtual disk into multipe files, Next
+B8: Finish
+B9: Click chuột phải vào tên Virtual Machine vừa đặt bên cửa sổ tay trái, Chọn Settings …
+B10: Click vào CD/DVD (SATA), chọn Use ISO image file và click Brower… để dẫn đến file Windows Server 2022.ISO vừa tải về, Nhấp vào Ok
+
 - Có 3 lựa chọn khi cài đặt: [tài liệu hướng dẫn](https://docs.google.com/document/d/1rB1SqUjgfCIueU7rSO3_WvkVXM85tsOabo93QS-Dh7I/edit?usp=sharing)
 1. Windows Server 2022 (Desktop Experience)
 2. Windows Server 2022 Server Core
