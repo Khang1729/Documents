@@ -25,7 +25,7 @@ Windows Server 2022 có 03 chế độ cài đặt:
   - Windows Server 2022 Server Core
   - Windows Server 2022 Nano Server
 
-*Các bước cài Windows Server 2022 (Desktop Experience):*
+Các bước cài Windows Server 2022 (Desktop Experience):
 - Step 1: Click chuột phải vào Virtual Machine vừa tạo và bấm Powrer/Power On
 - Step 2: Click chuột vào màn hình màu đen và bấm phím bất kỳ để vào giao diện Windows Setup
 - Step 3: Tại giao diện Windows Setup, Next
