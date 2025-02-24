@@ -15,10 +15,10 @@
 - Step 4: Chọn I will install the operating system later, Next
 - Step 5: Chọn Microsoft Windows, chọn Version: Windows Server 2022, Next
 - Step 6: Đặt tên Virtual machine, nên đặt tên dễ nhớ để thực hành các buổi sau, chọn đường dẫn lưu trữ đến ổ D, Next
-B7: Chọn Maximum disk size 60GB, Chọn Split virtual disk into multipe files, Next
-B8: Finish
-B9: Click chuột phải vào tên Virtual Machine vừa đặt bên cửa sổ tay trái, Chọn Settings …
-B10: Click vào CD/DVD (SATA), chọn Use ISO image file và click Brower… để dẫn đến file Windows Server 2022.ISO vừa tải về, Nhấp vào Ok
+- Step 7: Chọn Maximum disk size 60GB, chọn Split virtual disk into multipe files, Next
+- Step 8: Finish
+- Step 9: Click chuột phải vào Virtual Machine vừa tạo bên cửa sổ tay trái, Chọn Settings
+- Step 10: Click vào CD/DVD (SATA), chọn Use ISO image file và click Brower… để dẫn đến tập tin Windows Server 2022.ISO, Nhấp vào Ok
 
 - Có 3 lựa chọn khi cài đặt: [tài liệu hướng dẫn](https://docs.google.com/document/d/1rB1SqUjgfCIueU7rSO3_WvkVXM85tsOabo93QS-Dh7I/edit?usp=sharing)
 1. Windows Server 2022 (Desktop Experience)
