@@ -5,7 +5,7 @@
 - Windows Server 2022 Azure Edition: Thiết kế riêng để chạy trên nền tảng đám mây Azure, hoạt động như một máy ảo trên Azure IaaS hoặc cụm Azure Stack HCI.
 - Windows Server 2022 Essentials: Lý tưởng cho doanh nghiệp nhỏ (tối đa 25 người dùng, 50 thiết bị). Giao diện đơn giản hơn, tích hợp sẵn kết nối với dịch vụ đám mây nhưng không hỗ trợ ảo hóa.
 ## Download Windows Server 2022
-- Windows Server 2022: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
+- Link Download: https://www.microsoft.com/en-us/evalcenter/evaluate-windows-server-2022
 ## Download VMware Workstation
 - Link Dowload: https://www.vmware.com/products/desktop-hypervisor/workstation-and-fusion
 - Có 3 lựa chọn khi cài đặt: [tài liệu hướng dẫn](https://docs.google.com/document/d/1rB1SqUjgfCIueU7rSO3_WvkVXM85tsOabo93QS-Dh7I/edit?usp=sharing)
