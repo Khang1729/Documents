@@ -18,9 +18,15 @@
 - Step 7: Chọn Maximum disk size 60GB, chọn Split virtual disk into multipe files, Next
 - Step 8: Finish
 - Step 9: Click chuột phải vào Virtual Machine vừa tạo bên cửa sổ tay trái, Chọn Settings
-- Step 10: Click vào CD/DVD (SATA), chọn Use ISO image file và click Brower… để dẫn đến tập tin Windows Server 2022.ISO, Nhấp vào Ok
-
-- Có 3 lựa chọn khi cài đặt: [tài liệu hướng dẫn](https://docs.google.com/document/d/1rB1SqUjgfCIueU7rSO3_WvkVXM85tsOabo93QS-Dh7I/edit?usp=sharing)
-1. Windows Server 2022 (Desktop Experience)
-2. Windows Server 2022 Server Core
-3. Windows Server 2022 Nano Server
+- Step 10: Click vào CD/DVD (SATA), chọn Use ISO image file và click Brower… để dẫn đến tập tin Windows Server 2022.ISO, Ok
+## Installing Windows Server 2022
+- Step 1: Click chuột phải vào Virtual Machine vừa tạo và bấm Powrer/Power On
+- Step 2: Click chuột vào màn hình màu đen và bấm phím bất kỳ để vào giao diện Windows Setup
+- Step 3: Tại giao diện Windows Setup, Next
+- Step 4: Chọn Install now
+- Step 5: Tại giao diện Windows Setup hiển thì 4 tuỳ chọn, chọn Windows Server 2022 Datacenter Evaluation (Desktop Experience), Next
+- Step 6: Chọn I accept the Microsoft…, Next
+- Step 7: Màn hình Which type of installation do you want?, chọn Custom: Install Micorsoft Server ….
+- Step 8: Chọn New để tạo ổ đỉa (phân vùng) mới, Chọn Apply, Chọn Ok, Chọn Next
+- Step 9: Đặt password cho tài khoản Administrator
+- Step 10: Trên thanh công cụ của VMware thực hiện chọn Tab VM/Send Ctrl + Alt + Del
