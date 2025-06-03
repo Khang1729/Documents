@@ -33,15 +33,45 @@
 - Vào menu Edit -> Preferences ... -> IOS Routers -> New -> Chọn file .image -> (cứ nhấn "Next" cho đến khi hoàn tất) -> OK
 ## IV. Nội dung thực hành
 1. Cấu hình Syslog Server
-- Cầu hình trên Ubuntu Server 
+- Cầu hình trên Ubuntu Server
+```
+sudo apt install rsyslog
+sudo ufw allow 514/udp
+sudo systemctl restart rsyslog
+```
 - Cấu hình Router trên GNS3
+```
+conf t
+logging <IP_syslog_server>
+logging trap informational
+logging on
+```
 - Kiểm tra Log nhận được trên Server
 2. Cấu hình SSH
 - Trên Router Cisco:
-- Trên Máy tính Client kiểm tra kết nối SSH
+```
+conf t
+hostname R1
+ip domain-name local
+crypto key generate rsa
+username admin privilege 15 secret admin123
+line vty 0 4
+login local
+transport input ssh
+```
+- Trên Máy tính Client kiểm tra kết nối SSH: `ssh admin@<IP_router>`
 3. Cấu hình NTP
 - Cài đặt NTP Server trên Ubuntu Server
+```
+sudo apt install ntp
+sudo nano /etc/ntp.conf
+```
 - Trên Router Cisco
+```
+conf t
+ntp server <IP_NTP_server>
+show ntp associations
+```
 4. Cấu hình PAP/CHAP
 - Cài đặt FreeRADIUS trên Ubuntu Server (RADIUS Server): `sudo apt install freeradius`
 - Cấu hình người dùng và phương thức xác thực PAP/CHAP.
