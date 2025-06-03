@@ -1,4 +1,4 @@
-# Laboratory 2 - SYSLOG, SSH, NTP, PAP, CHAP
+# Laboratory 1 - SYSLOG, SSH, NTP, PAP, CHAP
 ## I. Giới thiệu
 1. Ghi log tập trung (Syslog):
 - Sử dụng để thu thập và lưu trữ thông tin hệ thống từ các thiết bị mạng một cách tập trung.
