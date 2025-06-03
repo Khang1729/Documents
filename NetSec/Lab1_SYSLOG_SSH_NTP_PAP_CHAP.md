@@ -1,1 +1,1 @@
-hello
+#Lab1 - SYSLOG, SSH, NTP, PAP, CHAP
