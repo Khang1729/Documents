@@ -17,6 +17,6 @@
 ### Lab5 - Secure network
 - Hướng dẫn thực hành: 
 - Lab5 thực hành 01 buổi 4 tiết
-### Lab6 - FIREWALL VÀ IPS
+### Lab6 - Firewall VÀ IPS
 - Hướng dẫn thực hành: 
 - Lab6 thực hành 02 buổi 10 tiết
