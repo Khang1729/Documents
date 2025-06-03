@@ -9,14 +9,8 @@
 - Step 3: Truy cập kho Repository để theo dõi nộp bài thực hành
 ## Clone and Push to Repository
 - Step 1: Mở Command Prompt hoặc CMD trên Windows
-- Step 2: Thực hiện câu lệnh clone Repository
-  ```
-  git clone https://github.com/dzokha1010/<name_repository>.git
-  ```
-- Step 2: Di chuyển vào thư mục Repository
-  ```
-  cd <name_repository>
-  ```
+- Step 2: Thực hiện câu lệnh clone Repository: `git clone https://github.com/dzokha1010/<name_repository>.git`
+- Step 2: Di chuyển vào thư mục Repository: `cd <name_repository>`
 - Step 3: Tạo tập tin Word đặt tên là MSSV lưu trong thư mục <name_repository>, tập tin này sẻ lưu trữ kết quả mỗi buổi thực hành.
 - Step 4: Chụp hình kết quả thực hành từng bài tập và dán vào tập tin Word
 - Step 5: Nộp tập tin Word sau buổi thực hành lên kho <name_repository> bằng các câu lệnh
@@ -33,6 +27,6 @@
 - Thiết lập tài khoản Github: `git config user.name <user_github>`
 - Thiết lập email đã đăng ký trên Github: `git config user.email <mail_user_github>`
 - Lựa chọn trình soạn thảo mặc định: `git config --global core.editor vi`
-- Đổi tên nhánh hiện tại thành <name_branch>: git branch -M <name_branch>
-- Chuyển sang nhánh <name_branch>: git checkout <name_branch>
-- Tăng giới hạn kích thước buffer khi đẩy (push) dữ liệu qua HTTP lên GitHub: git config http.postBuffer 52428800
+- Đổi tên nhánh hiện tại thành <name_branch>: `git branch -M <name_branch>`
+- Chuyển sang nhánh <name_branch>: `git checkout <name_branch>`
+- Tăng giới hạn kích thước buffer khi đẩy (push) dữ liệu qua HTTP lên GitHub: `git config http.postBuffer 52428800`
