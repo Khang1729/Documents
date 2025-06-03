@@ -7,7 +7,7 @@
 - Step 1: Tải và cài đặt Git: [https://git-scm.com/downloads](https://git-scm.com/downloads)
 - Step 2: Gửi địa chỉ mail đăng ký github.com cho giảng viên để được mời làm cộng tác viên trên Repository
 - Step 3: Truy cập kho Repository để theo dõi nộp bài thực hành
-## Clone and Push to Repository
+## Sao chép và đẩy mã nguồn lên kho lưu trữ
 - Step 1: Mở Command Prompt hoặc CMD trên Windows
 - Step 2: Thực hiện câu lệnh clone Repository: `git clone https://github.com/dzokha1010/<name_repository>.git`
 - Step 2: Di chuyển vào thư mục Repository: `cd <name_repository>`
