@@ -1,5 +1,20 @@
 # Laboratory 2 - SYSLOG, SSH, NTP, PAP, CHAP
 ## I. Giới thiệu
+1. Ghi log tập trung (Syslog):
+- Sử dụng để thu thập và lưu trữ thông tin hệ thống từ các thiết bị mạng một cách tập trung.
+- Link tham khảo: [https://datatracker.ietf.org/doc/html/rfc5424](https://datatracker.ietf.org/doc/html/rfc5424)
+2. Truy cập từ xa an toàn (SSH):
+- Giao thức bảo mật cho phép truy cập dòng lệnh đến các thiết bị từ xa.
+- Link tham khảo: [https://datatracker.ietf.org/doc/html/rfc4251](https://datatracker.ietf.org/doc/html/rfc4251)
+3. Đồng bộ thời gian mạng (NTP):
+- Giao thức giúp đồng bộ hóa thời gian hệ thống giữa các thiết bị trên mạng.
+- Link tham khảo: [https://datatracker.ietf.org/doc/html/rfc5905](https://datatracker.ietf.org/doc/html/rfc5905)
+4. Xác thực bằng PAP (Password Authentication Protocol):
+- Một phương thức xác thực cơ bản qua mạng, thường dùng trong PPP.
+- Link tham khảo: [https://datatracker.ietf.org/doc/html/rfc1334](https://datatracker.ietf.org/doc/html/rfc1334)
+5. Xác thực bằng CHAP (Challenge-Handshake Authentication Protocol):
+- Một giao thức xác thực bảo mật hơn PAP, sử dụng cơ chế thử thách-đáp ứng. 
+- Link tham khảo: [https://datatracker.ietf.org/doc/html/rfc1994](https://datatracker.ietf.org/doc/html/rfc1994)
 ## II. Các công cụ cần thiết
 - GNS3: [https://www.gns3.com/software/download](https://www.gns3.com/software/download)
 - Router IOS (Cisco IOS image): [https://drive.google.com/file/d/1nKteBUix69_-A0rxhxAovwmZt0O8Nq0v](https://drive.google.com/file/d/1nKteBUix69_-A0rxhxAovwmZt0O8Nq0v)
