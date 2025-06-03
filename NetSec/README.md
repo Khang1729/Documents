@@ -3,7 +3,7 @@
 - Slide: [https://drive.google.com/drive/folders/1N0MGsk_kAfxQaMgDVVOQ_wgx8DfoIBfy](https://drive.google.com/drive/folders/1N0MGsk_kAfxQaMgDVVOQ_wgx8DfoIBfy)
 ## Practical guide
 ### Lab1 - SYSLOG,SSH,NTP,PAP,CHAP
-- Hướng dẫn thực hành: 
+- Hướng dẫn thực hành: [https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab1_SYSLOG_SSH_NTP_PAP_CHAP.md](https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab1_SYSLOG_SSH_NTP_PAP_CHAP.md)
 - Lab1 thực hành 01 buổi 4 tiết
 ### Lab2 - Layer 2 và VLAN-Security
 - Hướng dẫn thực hành:
