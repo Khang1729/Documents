@@ -59,7 +59,7 @@ R1(config-if)#no shutdown
 R1(config-if)#exit
 R1(config)#end
 ```
-- Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface FastEthernet0/1 overload`
+- Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface Ethernet2/0 overload`
 - Access list định nghĩa mạng phía trong: `R1(config)#access-list 1 permit 192.168.106.0 0.0.0.255`
 - Cấu hình default route: `R1(config)#ip route 0.0.0.0 0.0.0.0 192.168.41.1`
 
