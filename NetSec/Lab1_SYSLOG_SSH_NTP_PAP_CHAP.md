@@ -38,7 +38,7 @@
 7. Tạo Node Ubuntu Server for GNS3
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Mô hình mạng thực hành
-![Model]("Images/model lab2.png")
+![Model](Images/model_lab1.png)
 ## V. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
 - Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
