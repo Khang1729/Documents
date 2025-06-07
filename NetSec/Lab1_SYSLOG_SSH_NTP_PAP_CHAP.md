@@ -36,7 +36,7 @@
 6. Tạo Node Ubuntu Server for GNS3
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Nội dung thực hành
-1. Cấu hình Syslog Server (Ubuntu Server)
+1. Cấu hình Ubuntu Server (Syslog Server)
 - Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
 ```
 sudo apt update
@@ -66,14 +66,36 @@ sudo systemctl status rsyslog
 sudo ufw allow 514/udp # Nếu UFW đang hoạt động
 sudo ufw allow 514/tcp # Nếu dùng TCP
 ```
-- Cấu hình Router trên GNS3
+- Cấu hình Router trên GNS3 (Syslog Client)
 ```
-conf t
-logging <IP_syslog_server>
-logging trap informational
-logging on
+Router#conf t
+Router(config)logging <IP_syslog_server> # Địa chỉ IP của Ubuntu Server
+Router(config)logging trap informational # Mức độ log gửi đi (0-7, informational = 6)
+Router(config)logging source-interface FastEthernet0/0 # Sử dụng interface này làm nguồn khi gửi log
+Router(config)logging on # Đảm bảo logging được bật (thường là mặc định)
 ```
+Mức độ log:
+0: emergencies
+1: alerts
+2: critical
+3: errors
+4: warnings
+5: notifications
+6: informational
+7: debugging
+
 - Kiểm tra Log nhận được trên Server
+  + Trên Router thực hiện các hành động để tạo Log
+```
+Router#configure terminal
+Router(config)#interface Loopback0
+Router(config-if)#ip address 1.1.1.1 255.255.255.0
+Router(config-if)#no shutdown
+Router(config-if)#exit
+Router(config)#end
+Router#exit
+```
+ + Trên Ubuntu Server kiểm tra file log: `tail -f /var/log/cisco_router.log`
 2. Cấu hình SSH
 - Trên Router Cisco:
 ```
