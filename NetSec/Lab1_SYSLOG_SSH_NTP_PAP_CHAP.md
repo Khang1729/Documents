@@ -31,6 +31,8 @@
 - Mở GNS3 -> Run the appliance on my local computer
 - Đặt tên dự án và đường dẫn lưu dự án
 - Vào menu Edit -> Preferences ... -> IOS Routers -> New -> Chọn file .image -> (cứ nhấn "Next" cho đến khi hoàn tất) -> OK
+5. Tạo Node Ubuntu Server for GNS3
+- Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Nội dung thực hành
 1. Cấu hình Syslog Server
 - Cầu hình trên Ubuntu Server
