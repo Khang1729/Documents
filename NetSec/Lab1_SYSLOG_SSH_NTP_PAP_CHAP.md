@@ -28,11 +28,12 @@
 - Làm theo hướng dẫn để tạo máy ảo mới
 - Chọn file cài Ubuntu Server (.iso) và cài đặt hệ điều hành lên máy ảo đó
 3. Cài đặt GNS3: Mở file cài đặt .exe và làm theo các bước mặc định (cứ nhấn “Next” cho đến khi hoàn tất).
-4. Cấu hình Router IOS:
+4. Cài đặt GNS3 VM: Mở VMware Workstation, vào File > Open... và chọn file .ova của GNS3 VM để nhập (import).
+5. Cấu hình Router IOS:
 - Mở GNS3 -> Run the appliance on my local computer
 - Đặt tên dự án và đường dẫn lưu dự án
 - Vào menu Edit -> Preferences ... -> IOS Routers -> New -> Chọn file .image -> (cứ nhấn "Next" cho đến khi hoàn tất) -> OK
-5. Tạo Node Ubuntu Server for GNS3
+6. Tạo Node Ubuntu Server for GNS3
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Nội dung thực hành
 1. Cấu hình Syslog Server
