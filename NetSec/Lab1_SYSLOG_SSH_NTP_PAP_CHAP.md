@@ -39,6 +39,31 @@
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Mô hình mạng thực hành
 ![Model](Images/model_lab1.png)
+1. Để có thể kết nối Ubuntu Server với SWitch: chúng ta cần khởi động Ubuntu Server và thay đổi Network Addapter về Read-only
+2. Cấu hình Router để Ubuntu Server có thể kết nối được với Internet
+- Giao diện phía trong (VMnet1)
+```
+R1#configure terminal
+R1(config)#interface FastEthernet0/0
+R1(config-if)#ip address 192.168.106.1 255.255.255.0
+R1(config-if)#ip nat inside 
+R1(config-if)#no shutdown
+R1(config-if)#exit
+```
+- Giao diện phía ngoài (VMnet8)
+```
+R1(config)#interface Ethernet2/0
+R1(config-if)#ip address 192.168.41.2 255.255.255.0
+R1(config-if)#ip nat outside
+R1(config-if)#no shutdown
+R1(config-if)#exit
+R1(config)#end
+Router#exit
+```
+- Cấu hình NAT overload: `ip nat inside source list 1 interface FastEthernet0/1 overload`
+- Access list định nghĩa mạng phía trong: `access-list 1 permit 192.168.106.0 0.0.0.255`
+- Cấu hình default route: `ip route 0.0.0.0 0.0.0.0 192.168.41.1`
+
 ## V. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
 - Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
