@@ -36,12 +36,35 @@
 6. Tạo Node Ubuntu Server for GNS3
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Nội dung thực hành
-1. Cấu hình Syslog Server
-- Cầu hình trên Ubuntu Server
+1. Cấu hình Syslog Server (Ubuntu Server)
+- Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
 ```
+sudo apt update
 sudo apt install rsyslog
-sudo ufw allow 514/udp
-sudo systemctl restart rsyslog
+```
+- Cấu hình rsyslog để nhận log từ xa:
+  + Chỉnh sửa file cấu hình rsyslog: `sudo nano /etc/rsyslog.conf`
+  + Khởi động lại dịch vụ rsyslog: `sudo systemctl restart rsyslog`
+  + Tìm và bỏ ghi chú (uncomment) các dòng sau để cho phép nhận UDP và TCP (UDP là phổ biến hơn cho syslog):
+```
+# provides UDP syslog reception
+module(load="imudp")
+input(type="imudp" port="514")
+
+# provides TCP syslog reception
+# module(load="imtcp")
+# input(type="imtcp" port="514")
+```
+ + Thêm dòng sau vào cuối file để lưu log từ các thiết bị từ xa vào một file riêng (ví dụ: /var/log/cisco_router.log):
+```
+if $fromhost contains '192.168.100.1' then /var/log/cisco_router.log
+& ~ # Không xử lý các log này bằng các quy tắc mặc định khác
+```
+ + Kiểm tra trạng thái cổng mở
+```
+sudo systemctl status rsyslog
+sudo ufw allow 514/udp # Nếu UFW đang hoạt động
+sudo ufw allow 514/tcp # Nếu dùng TCP
 ```
 - Cấu hình Router trên GNS3
 ```
