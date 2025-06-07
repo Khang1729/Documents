@@ -145,7 +145,7 @@ sudo ufw allow 123/udp # Nếu UFW đang hoạt động
 R1(config)#clock timezone ICT 7
 R1(config)#clock set 10:00:00 07 Jun 2025 # Cấu hình thời gian gần đúng trước khi đồng bộ
 ```
-    + Cấu hình NTP Server:
+  - Cấu hình NTP Server:
 ```
 R1(config)#ntp server 192.168.100.2 prefer # Địa chỉ IP của Ubuntu Server
 Lưu ý: prefer ưu tiên server này nếu có nhiều server NTP.
