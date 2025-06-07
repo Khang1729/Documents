@@ -37,7 +37,8 @@
 - Vào menu Edit -> Preferences ... GNS3 VM -> Check vào Enable the GNS3 VM -> Chọn GNS3 VM vừa import trên VMware -> OK
 7. Tạo Node Ubuntu Server for GNS3
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
-## IV. Nội dung thực hành
+## IV. Mô hình mạng thực hành
+## V. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
 - Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
 ```
@@ -264,6 +265,6 @@ R1#debug ppp authentication
 
 Trên Router R2: `R2#show interface FastEthernet0/0 #Tương tự, kiểm tra trạng thái "Line protocol is up" và "PPP is up". `
 
-## V. Lưu ý
+## VI. Lưu ý
 1. Lưu cấu hình: Sau mỗi phần thực hành, hãy nhớ lưu cấu hình trên các Router bằng lệnh `copy running-config startup-config ` để không bị mất khi khởi động lại.
 2. Debug: Lệnh debug trong IOS rất hữu ích để gỡ lỗi các vấn đề về kết nối và xác thực. Luôn nhớ tắt debug bằng `undebug all` sau khi hoàn thành để tránh làm đầy console hoặc CPU quá mức.
