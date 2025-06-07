@@ -35,7 +35,7 @@
 - Vào menu Edit -> Preferences ... -> IOS Routers -> New -> Chọn file .image -> (cứ nhấn "Next" cho đến khi hoàn tất) -> OK
 6. Bật Enable the GNS3 VM trên GNS3
 - Vào menu Edit -> Preferences ... GNS3 VM -> Check vào Enable the GNS3 VM -> Chọn GNS3 VM vừa import trên VMware -> OK
-8. Tạo Node Ubuntu Server for GNS3
+7. Tạo Node Ubuntu Server for GNS3
 - Vào menu Edit -> Preferences ... -> VMware VMs -> New -> Chọn Ubuntu Server -> Finish -> Ok
 ## IV. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
