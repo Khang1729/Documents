@@ -104,26 +104,61 @@ Router#configure terminal
 Router(config)#hostname R1
 R1(config)#ip domain-name lab.local
 ```
-  + 
-crypto key generate rsa
-username admin privilege 15 secret admin123
-line vty 0 4
-login local
-transport input ssh
+  + Tạo khóa mã hóa RSA:
 ```
+R1(config)#crypto key generate rsa
+How many bits in the modulus [512]: 1024 # Nên chọn 1024 hoặc 2048 để tăng cường bảo mật
+```
+  + Tạo người dùng local: `R1(config)#username admin secret Cisco123`
+Lưu ý: secret mã hóa mật khẩu mạnh hơn password.
+  + Cấu hình VTY lines cho SSH:
+```
+R1(config)#line vty 0 4
+R1(config-line)#transport input ssh # Chỉ cho phép SSH, không cho phép Telnet
+R1(config-line)#login local # Sử dụng cơ sở dữ liệu người dùng local
+R1(config-line)#exit
+```
+  + Cấu hình SSH version (tùy chọn nhưng khuyến nghị): `R1(config)#ip ssh version 2 # Nên dùng SSHv2 để bảo mật hơn`
+  + Kích hoạt SSH: `R1(config)#ip ssh enable # SSH sẽ tự động kích hoạt sau khi tạo khóa`
+
 - Trên Máy tính Client kiểm tra kết nối SSH: `ssh admin@<IP_router>`
+  openssh-client -y
 3. Cấu hình NTP
-- Cài đặt NTP Server trên Ubuntu Server
+- Cài đặt NTP Server trên Ubuntu Server:
+  + Cài đặt NTP server (chrony hoặc ntp): chrony được khuyến nghị cho các phiên bản Ubuntu Server mới hơn.
 ```
-sudo apt install ntp
-sudo nano /etc/ntp.conf
+sudo apt update
+sudo apt install chrony -y
 ```
-- Trên Router Cisco
+  + Chỉnh sửa file cấu hình chrony: `sudo nano /etc/chrony/chrony.conf `
+  + Thêm dòng sau để cho phép Router R1 truy cập (thay 192.168.100.0/24 bằng dải mạng của bạn): `allow 192.168.100.0/24`
+    Kiểm tra và sửa đổi các dòng pool hoặc server để chrony tự đồng bộ với các NTP server công cộng (ví dụ: pool ntp.ubuntu.com iburst). Lưu file và thoát.
+  + Khởi động lại dịch vụ chrony: `sudo systemctl restart chrony`
+  + Kiểm tra trạng thái dịch vụ và mở port 123 (nếu có tường lửa):
 ```
-conf t
-ntp server <IP_NTP_server>
-show ntp associations
+sudo systemctl status chrony
+sudo ufw allow 123/udp # Nếu UFW đang hoạt động
 ```
+- Cấu hình trên Router R1 (NTP Client)
++ Đặt múi giờ và thời gian (tùy chọn nhưng khuyến nghị):
+```
+R1(config)#clock timezone ICT 7
+R1(config)#clock set 10:00:00 07 Jun 2025 # Cấu hình thời gian gần đúng trước khi đồng bộ
+```
++ Cấu hình NTP Server:
+```
+R1(config)#ntp server 192.168.100.2 prefer # Địa chỉ IP của Ubuntu Server
+Lưu ý: prefer ưu tiên server này nếu có nhiều server NTP.
+```
+- Kiểm tra NTP
+Trên Router R1:
+Kiểm tra trạng thái đồng bộ NTP: `R1#show ntp status`
+Bạn sẽ thấy trạng thái "Clock is synchronized" hoặc tương tự.
+Kiểm tra các mối quan hệ NTP: `R1#show ntp associations `
+Bạn sẽ thấy Ubuntu Server được liệt kê là NTP peer.
+Kiểm tra thời gian hệ thống:`R1#show clock detail `
+Thời gian trên Router R1 sẽ được đồng bộ với Ubuntu Server.
+
 4. Cấu hình PAP/CHAP
 - Cài đặt FreeRADIUS trên Ubuntu Server (RADIUS Server): `sudo apt install freeradius`
 - Cấu hình người dùng và phương thức xác thực PAP/CHAP.
