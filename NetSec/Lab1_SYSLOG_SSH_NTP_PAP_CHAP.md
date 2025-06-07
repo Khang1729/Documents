@@ -262,9 +262,6 @@ R1#debug ppp authentication
 
 Trên Router R2: `R2#show interface FastEthernet0/0 #Tương tự, kiểm tra trạng thái "Line protocol is up" và "PPP is up". `
 
-IV. Kết luận và Lưu ý
-Lưu cấu hình: Sau mỗi phần thực hành, hãy nhớ lưu cấu hình trên các Router bằng lệnh copy running-config startup-config để không bị mất khi khởi động lại.
-Debug: Lệnh debug trong IOS rất hữu ích để gỡ lỗi các vấn đề về kết nối và xác thực. Luôn nhớ tắt debug bằng undebug all sau khi hoàn thành để tránh làm đầy console hoặc CPU quá mức.
-Bảo mật: PAP không an toàn và chỉ nên dùng trong môi trường lab. CHAP bảo mật hơn nhưng vẫn có những hạn chế nhất định so với các phương pháp xác thực hiện đại hơn như EAP/RADIUS.
-Kiến thức cơ bản: Đảm bảo bạn hiểu rõ về địa chỉ IP, subnetting, và cách thiết bị mạng giao tiếp cơ bản trước khi đi sâu vào các giao thức này.
-Chúc bạn thực hành thành công và nắm vững kiến thức! Nếu có bất kỳ bước nào gặp khó khăn, đừng ngần ngại hỏi nhé.
+## V. Lưu ý
+1. Lưu cấu hình: Sau mỗi phần thực hành, hãy nhớ lưu cấu hình trên các Router bằng lệnh `copy running-config startup-config ` để không bị mất khi khởi động lại.
+2. Debug: Lệnh debug trong IOS rất hữu ích để gỡ lỗi các vấn đề về kết nối và xác thực. Luôn nhớ tắt debug bằng `undebug all` sau khi hoàn thành để tránh làm đầy console hoặc CPU quá mức.
