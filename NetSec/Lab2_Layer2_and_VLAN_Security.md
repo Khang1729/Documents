@@ -5,11 +5,8 @@
 - Nhận diện các lỗ hổng Layer 2 (VLAN Hopping, MAC Flooding, DHCP Spoofing,...).
 - Cấu hình các cơ chế bảo mật cấp Layer 2 như: Port Security, BPDU Guard, DHCP Snooping, Dynamic ARP Inspection (DAI).
 ## II. Yêu cầu công cụ
-- GNS3: Mô phỏng switch Layer 2/3 (Cisco IOS Switch image).
-- VMware Workstation / VirtualBox: Máy ảo Ubuntu hoặc Windows để đóng vai trò máy trạm.
-- Cisco IOSvL2 (hoặc tương đương) để mô phỏng switch Layer 2.
-- Wireshark: Dùng phân tích gói tin.
-- Yersinia tool (trên Ubuntu): để giả lập các cuộc tấn công Layer 2 như VLAN Hopping, STP Attack.
+- Wireshark: [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html)
+- Yersinia: [https://www.kali.org/tools/yersinia/](https://www.kali.org/tools/yersinia/)
 ## III. Nội dung thực hành
 1. Cấu hình VLAN và Trunk
 Trên Switch:
