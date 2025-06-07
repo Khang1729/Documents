@@ -98,10 +98,13 @@ Router#exit
   + Trên Ubuntu Server kiểm tra file log: `tail -f /var/log/cisco_router.log`
 2. Cấu hình SSH
 - Trên Router Cisco:
+  + Đặt hostname và domain-name: Cần thiết để tạo khóa mã hóa.
 ```
-conf t
-hostname R1
-ip domain-name local
+Router#configure terminal
+Router(config)#hostname R1
+R1(config)#ip domain-name lab.local
+```
+  + 
 crypto key generate rsa
 username admin privilege 15 secret admin123
 line vty 0 4
