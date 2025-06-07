@@ -58,7 +58,6 @@ R1(config-if)#ip nat outside
 R1(config-if)#no shutdown
 R1(config-if)#exit
 R1(config)#end
-Router#exit
 ```
 - Cấu hình NAT overload: `ip nat inside source list 1 interface FastEthernet0/1 overload`
 - Access list định nghĩa mạng phía trong: `access-list 1 permit 192.168.106.0 0.0.0.255`
