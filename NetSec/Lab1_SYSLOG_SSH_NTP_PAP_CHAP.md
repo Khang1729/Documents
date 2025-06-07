@@ -55,12 +55,12 @@ input(type="imudp" port="514")
 # module(load="imtcp")
 # input(type="imtcp" port="514")
 ```
- + Thêm dòng sau vào cuối file để lưu log từ các thiết bị từ xa vào một file riêng (ví dụ: /var/log/cisco_router.log):
+  + Thêm dòng sau vào cuối file để lưu log từ các thiết bị từ xa vào một file riêng (ví dụ: /var/log/cisco_router.log):
 ```
 if $fromhost contains '192.168.100.1' then /var/log/cisco_router.log
 & ~ # Không xử lý các log này bằng các quy tắc mặc định khác
 ```
- + Kiểm tra trạng thái cổng mở
+  + Kiểm tra trạng thái cổng mở
 ```
 sudo systemctl status rsyslog
 sudo ufw allow 514/udp # Nếu UFW đang hoạt động
@@ -95,7 +95,7 @@ Router(config-if)#exit
 Router(config)#end
 Router#exit
 ```
- + Trên Ubuntu Server kiểm tra file log: `tail -f /var/log/cisco_router.log`
+  + Trên Ubuntu Server kiểm tra file log: `tail -f /var/log/cisco_router.log`
 2. Cấu hình SSH
 - Trên Router Cisco:
 ```
