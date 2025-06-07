@@ -11,14 +11,12 @@
 ## III. Nội dung thực hành
 1. Cấu hình Cisco IOSvL2
 - Mở GNS3 -> Edit -> References ... -> Qemu VMs -> New -> Run this Qemu VM on the GNS3 VM -> đặt tên bắt kỳ cho Switch ảo -> qemu-system-x86_64 -> Telnet -> New Image -> chọn đường dẫn đến file IOSvL2 tải về -> Finish
-1. Cấu hình VLAN và Trunk
+2. Cấu hình VLAN và Trunk
 Trên Switch:
 
 
 Tạo VLAN:
 
- pgsql
-CopyEdit
 vlan 10
 name SALES
 vlan 20
