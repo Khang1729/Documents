@@ -53,7 +53,7 @@ R1(config-if)#exit
 - Giao diện phía ngoài (VMnet8)
 ```
 R1(config)#interface Ethernet2/0
-R1(config-if)#ip address 192.168.41.2 255.255.255.0
+R1(config-if)#ip address dhcp
 R1(config-if)#ip nat outside
 R1(config-if)#no shutdown
 R1(config-if)#exit
