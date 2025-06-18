@@ -61,7 +61,7 @@ R1(config)#end
 ```
 - Access list định nghĩa mạng phía trong: `R1(config)#access-list 1 permit 192.168.106.0 0.0.0.255`
 - Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface Ethernet2/0 overload`
-- Đặt default route: `R1(config)#ip route 0.0.0.0 0.0.0.0 Ethernet2/0`
+- Đặt default route: `R1(config)#ip route 0.0.0.0 0.0.0.0 192.168.41.2
 - Các câu lệnh kiểm tra trên router
 ```
 R1#show ip interface brief
