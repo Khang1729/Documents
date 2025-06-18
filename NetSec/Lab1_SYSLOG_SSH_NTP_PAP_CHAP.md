@@ -85,8 +85,8 @@ network:
           - 8.8.8.8
           - 8.8.4.4
 ```
-`sudo netplan apply`
-`ip route`
+- Áp dụng thay đổi: `sudo netplan apply`
+- Kiểm tra: `ip route`
 Kết quả mong đợi: default via 192.168.106.254 dev ens33
 ## V. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
