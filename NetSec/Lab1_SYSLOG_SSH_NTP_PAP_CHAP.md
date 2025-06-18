@@ -179,12 +179,17 @@ How many bits in the modulus [512]: 1024 # Nên chọn 1024 hoặc 2048 để t�
 
   + Cấu hình VTY lines cho SSH:
 ```
-R1(config)#line vty 0 4
-R1(config-line)#transport input ssh # Chỉ cho phép SSH, không cho phép Telnet
-R1(config-line)#login local # Sử dụng cơ sở dữ liệu người dùng local
-R1(config-line)#exit
+Router(config)#line vty 0 4
+Router(config-line)#transport input ssh # Chỉ cho phép SSH, không cho phép Telnet
+Router(config-line)#login local # Sử dụng cơ sở dữ liệu người dùng local
+Router(config-line)#exit
 ```
   + Cấu hình SSH version (tùy chọn nhưng khuyến nghị): `R1(config)#ip ssh version 2 # Nên dùng SSHv2 để bảo mật hơn`
+  + Cấu hình timeout và retry (tùy chọn)
+```
+Router(config)#ip ssh time-out 60
+Router(config)#ip ssh authentication-retries 3
+```
   + Kích hoạt SSH: `R1(config)#ip ssh enable # SSH sẽ tự động kích hoạt sau khi tạo khóa`
 
 - Trên Máy tính Client kiểm tra kết nối SSH: `ssh admin@<IP_router>`
