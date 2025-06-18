@@ -159,7 +159,7 @@ Router(config-if)#exit
 Router(config)#end
 Router#exit
 ```
-  + Trên Ubuntu Server kiểm tra file log: `tail -f /var/log/cisco_router.log`
+  + Trên Ubuntu Server kiểm tra file log: `tail -f /var/log/router.log`
 2. Cấu hình SSH
 - Trên Router Cisco:
   + Đặt hostname và domain-name: Cần thiết để tạo khóa mã hóa.
