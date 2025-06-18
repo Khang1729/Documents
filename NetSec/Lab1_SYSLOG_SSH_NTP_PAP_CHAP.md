@@ -190,7 +190,6 @@ Router(config-line)#exit
 Router(config)#ip ssh time-out 60
 Router(config)#ip ssh authentication-retries 3
 ```
-  + Kích hoạt SSH: `R1(config)#ip ssh enable # SSH sẽ tự động kích hoạt sau khi tạo khóa`
 
 - Trên Máy tính Client kiểm tra kết nối SSH: `ssh admin@<IP_router>`
   openssh-client -y
