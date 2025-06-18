@@ -129,10 +129,14 @@ sudo ufw allow 514/tcp # Nếu dùng TCP
 - Cấu hình Router trên GNS3 (Syslog Client)
 ```
 Router#conf t
-Router(config)logging <IP_syslog_server> # Địa chỉ IP của Ubuntu Server
-Router(config)logging trap informational # Mức độ log gửi đi (0-7, informational = 6)
-Router(config)logging source-interface FastEthernet0/0 # Sử dụng interface này làm nguồn khi gửi log
-Router(config)logging on # Đảm bảo logging được bật (thường là mặc định)
+Router(config)#logging <IP_syslog_server> # Địa chỉ IP của Ubuntu Server
+Router(config)#logging trap informational # Mức độ log gửi đi (0-7, informational = 6)
+Router(config)#logging console # Cấu hình gửi thông báo log lên màn hình (tùy chọn)
+Router(config)#service timestamps log datetime msec #Ghi hostname trong log
+Router(config)#logging source-interface FastEthernet0/0 # Sử dụng interface này làm nguồn khi gửi log
+Router(config)#logging on # Đảm bảo logging được bật (thường là mặc định)
+Router(config)#end
+Router#write memory
 ```
 Mức độ log:
 0: emergencies
