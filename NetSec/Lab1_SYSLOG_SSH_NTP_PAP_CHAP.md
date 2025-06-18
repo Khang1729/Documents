@@ -99,8 +99,6 @@ sudo apt install rsyslog
 ```
 - Cấu hình rsyslog để nhận log từ xa:
   + Chỉnh sửa file cấu hình rsyslog: `sudo nano /etc/rsyslog.conf`
-  + Khởi động lại dịch vụ rsyslog: `sudo systemctl restart rsyslog`
-  + Tìm và bỏ ghi chú (uncomment) các dòng sau để cho phép nhận UDP và TCP (UDP là phổ biến hơn cho syslog):
 ```
 # provides UDP syslog reception
 module(load="imudp")
@@ -110,10 +108,17 @@ input(type="imudp" port="514")
 # module(load="imtcp")
 # input(type="imtcp" port="514")
 ```
-  + Thêm dòng sau vào cuối file để lưu log từ các thiết bị từ xa vào một file riêng (ví dụ: /var/log/cisco_router.log):
+  + Tạo file log riêng cho router: `sudo nano /etc/rsyslog.d/router.conf`
 ```
-if $fromhost contains '192.168.100.1' then /var/log/cisco_router.log
-& ~ # Không xử lý các log này bằng các quy tắc mặc định khác
+if ($fromhost-ip == '192.168.106.254') then {
+    /var/log/router.log
+    stop
+}
+```
+  + Khởi động lại dịch vụ rsyslog:
+```
+sudo systemctl restart rsyslog
+sudo systemctl enable rsyslog
 ```
   + Kiểm tra trạng thái cổng mở
 ```
