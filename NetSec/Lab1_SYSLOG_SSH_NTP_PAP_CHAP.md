@@ -40,7 +40,8 @@
 ## IV. Mô hình mạng thực hành
 ![Model](Images/model_lab1.png)
 1. Để có thể kết nối Ubuntu Server với SWitch: chúng ta cần khởi động Ubuntu Server và thay đổi Network Addapter về Read-only
-2. Cấu hình Router để Ubuntu Server có thể kết nối được với Internet
+2. Cấu hình Cloud trong GNS3, thêm card mạng VMnet8
+3. Cấu hình Router để Ubuntu Server có thể kết nối được với Internet
 - Giao diện phía trong (VMnet1)
 ```
 R1#configure terminal
