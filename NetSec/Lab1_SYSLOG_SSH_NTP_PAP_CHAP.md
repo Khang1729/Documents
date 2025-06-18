@@ -166,15 +166,16 @@ Router#exit
 ```
 Router#configure terminal
 Router(config)#hostname R1
-R1(config)#ip domain-name lab.local
+Router(config)#ip domain-name lab.local
 ```
+  + Tạo người dùng local: `Router(config)#username admin privilege 15 secret Cisco123`
+Lưu ý: secret mã hóa mật khẩu mạnh hơn password.
   + Tạo khóa mã hóa RSA:
 ```
 R1(config)#crypto key generate rsa
 How many bits in the modulus [512]: 1024 # Nên chọn 1024 hoặc 2048 để tăng cường bảo mật
 ```
-  + Tạo người dùng local: `R1(config)#username admin secret Cisco123`
-Lưu ý: secret mã hóa mật khẩu mạnh hơn password.
+
   + Cấu hình VTY lines cho SSH:
 ```
 R1(config)#line vty 0 4
