@@ -52,12 +52,13 @@ R1(config-if)#exit
 ```
 - Giao diện phía ngoài (VMnet8)
 ```
-R1(config)#interface Ethernet2/0
+R1(config)#interface FastEthernet1/1
 R1(config-if)#ip address dhcp
 R1(config-if)#ip nat outside
 R1(config-if)#no shutdown
 R1(config-if)#exit
 R1(config)#end
+R1#write memory
 ```
 - Access list định nghĩa mạng phía trong: `R1(config)#access-list 1 permit 192.168.106.0 0.0.0.255`
 - Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface Ethernet2/0 overload`
