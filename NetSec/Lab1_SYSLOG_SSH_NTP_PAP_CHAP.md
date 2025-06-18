@@ -67,6 +67,27 @@ R1(config)#end
 R1#show ip interface brief
 R1#show ip router
 ```
+- Cấu hình IP trên Ubuntu Server: `sudo nano /etc/netplan/01-netcfg.yaml`
+```
+network:
+  version: 2
+  renderer: networkd
+  ethernets:
+    ens33:
+      dhcp4: no
+      addresses:
+        - 192.168.106.100/24
+      routes:
+        - to: default
+          via: 192.168.106.254
+      nameservers:
+        addresses:
+          - 8.8.8.8
+          - 8.8.4.4
+```
+`sudo netplan apply`
+`ip route`
+Kết quả mong đợi: default via 192.168.106.254 dev ens33
 ## V. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
 - Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
