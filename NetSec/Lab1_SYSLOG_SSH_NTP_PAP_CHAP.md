@@ -45,7 +45,7 @@
 ```
 R1#configure terminal
 R1(config)#interface FastEthernet0/0
-R1(config-if)#ip address 192.168.106.1 255.255.255.0
+R1(config-if)#ip address 192.168.106.254 255.255.255.0
 R1(config-if)#ip nat inside 
 R1(config-if)#no shutdown
 R1(config-if)#exit
@@ -62,7 +62,11 @@ R1(config)#end
 - Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface Ethernet2/0 overload`
 - Access list định nghĩa mạng phía trong: `R1(config)#access-list 1 permit 192.168.106.0 0.0.0.255`
 - Đặt default route: `R1(config)#ip route 0.0.0.0 0.0.0.0 Ethernet2/0`
-
+- Các câu lệnh kiểm tra trên router
+```
+R1#show ip interface brief
+R1#show ip router
+```
 ## V. Nội dung thực hành
 1. Cấu hình Ubuntu Server (Syslog Server)
 - Cài đặt rsyslog (thường có sẵn) hoặc syslog-ng
