@@ -169,10 +169,11 @@ Router(config)#hostname R1
 Router(config)#ip domain-name lab.local
 ```
   + Tạo người dùng local: `Router(config)#username admin privilege 15 secret Cisco123`
-Lưu ý: secret mã hóa mật khẩu mạnh hơn password.
+
+Lưu ý: privilege 15 = quyền cao nhất. secret mã hóa mật khẩu mạnh.
   + Tạo khóa mã hóa RSA:
 ```
-R1(config)#crypto key generate rsa
+Router(config)#crypto key generate rsa
 How many bits in the modulus [512]: 1024 # Nên chọn 1024 hoặc 2048 để tăng cường bảo mật
 ```
 
