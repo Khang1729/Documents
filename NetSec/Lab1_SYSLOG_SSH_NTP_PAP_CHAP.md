@@ -59,8 +59,8 @@ R1(config-if)#no shutdown
 R1(config-if)#exit
 R1(config)#end
 ```
-- Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface Ethernet2/0 overload`
 - Access list định nghĩa mạng phía trong: `R1(config)#access-list 1 permit 192.168.106.0 0.0.0.255`
+- Cấu hình NAT overload: `R1(config)#ip nat inside source list 1 interface Ethernet2/0 overload`
 - Đặt default route: `R1(config)#ip route 0.0.0.0 0.0.0.0 Ethernet2/0`
 - Các câu lệnh kiểm tra trên router
 ```
