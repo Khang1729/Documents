@@ -201,7 +201,12 @@ sudo apt update
 sudo apt install chrony -y
 ```
   + Chỉnh sửa file cấu hình chrony: `sudo nano /etc/chrony/chrony.conf `
-  + Thêm dòng sau để cho phép Router R1 truy cập (thay 192.168.100.0/24 bằng dải mạng của bạn): `allow 192.168.100.0/24`
+  + Thêm dòng sau để cho phép Router R1 truy cập (thay 192.168.100.0/24 bằng dải mạng của bạn):
+```
+local stratum 8
+allow 192.168.100.0/24
+server 127.127.1.1 prefer
+```
     Kiểm tra và sửa đổi các dòng pool hoặc server để chrony tự đồng bộ với các NTP server công cộng (ví dụ: pool ntp.ubuntu.com iburst). Lưu file và thoát.
   + Khởi động lại dịch vụ chrony:
 ```
