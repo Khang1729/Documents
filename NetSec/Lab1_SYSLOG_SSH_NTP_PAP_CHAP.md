@@ -203,7 +203,11 @@ sudo apt install chrony -y
   + Chỉnh sửa file cấu hình chrony: `sudo nano /etc/chrony/chrony.conf `
   + Thêm dòng sau để cho phép Router R1 truy cập (thay 192.168.100.0/24 bằng dải mạng của bạn): `allow 192.168.100.0/24`
     Kiểm tra và sửa đổi các dòng pool hoặc server để chrony tự đồng bộ với các NTP server công cộng (ví dụ: pool ntp.ubuntu.com iburst). Lưu file và thoát.
-  + Khởi động lại dịch vụ chrony: `sudo systemctl restart chrony`
+  + Khởi động lại dịch vụ chrony:
+```
+sudo systemctl restart chrony
+sudo systemctl enable chrony
+```
   + Kiểm tra trạng thái dịch vụ và mở port 123 (nếu có tường lửa):
 ```
 sudo systemctl status chrony
@@ -213,11 +217,11 @@ sudo ufw allow 123/udp # Nếu UFW đang hoạt động
   + Đặt múi giờ và thời gian (tùy chọn nhưng khuyến nghị):
 ```
 R1(config)#clock timezone ICT 7
-R1(config)#clock set 10:00:00 07 Jun 2025 # Cấu hình thời gian gần đúng trước khi đồng bộ
+R1#clock set 10:00:00 07 Jun 2025 # Cấu hình thời gian gần đúng trước khi đồng bộ
 ```
   - Cấu hình NTP Server:
 ```
-R1(config)#ntp server 192.168.100.2 prefer # Địa chỉ IP của Ubuntu Server
+R1(config)#ntp server 192.168.106.100 source FastEthernet0/0 #prefer # Địa chỉ IP của Ubuntu Server
 Lưu ý: prefer ưu tiên server này nếu có nhiều server NTP.
 ```
 - Kiểm tra NTP (Router R1):
