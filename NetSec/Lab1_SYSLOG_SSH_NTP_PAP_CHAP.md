@@ -238,14 +238,14 @@ Lưu ý: prefer ưu tiên server này nếu có nhiều server NTP.
 a) Cấu hình IP cho các interface nối trực tiếp:
 - Cấu hình trên R1:
 ```
-R1(config)#interface FastEthernet0/1
+R1(config)#interface serial1/0
 R1(config-if)#ip address 10.0.0.1 255.255.255.252
 R1(config-if)#no shutdown
 R1(config-if)#encapsulation ppp # Đặt encapsulation là PPP
 ```
 - Cấu hình trên R2:
 ```
-R2(config)#interface FastEthernet0/0
+R2(config)#interface serial1/0
 R2(config-if)#ip address 10.0.0.2 255.255.255.252
 R2(config-if)#no shutdown
 R2(config-if)#encapsulation ppp # Đặt encapsulation là PPP
