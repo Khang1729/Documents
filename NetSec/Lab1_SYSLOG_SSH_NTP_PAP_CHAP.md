@@ -235,7 +235,7 @@ Lưu ý: prefer ưu tiên server này nếu có nhiều server NTP.
   + Kiểm tra thời gian hệ thống:`R1#show clock detail #Thời gian trên Router R1 sẽ được đồng bộ với Ubuntu Server.`
 
 4. Cấu hình PAP
-![Model](Images/model_lab1a.png)
+![Model](Images/model_lab1a.PNG)
 a) Cấu hình IP cho các interface nối trực tiếp:
 - Cấu hình trên R1:
 ```
