@@ -6,6 +6,7 @@
 - Cấu hình các cơ chế bảo mật cấp Layer 2 như: Port Security, BPDU Guard, DHCP Snooping, Dynamic ARP Inspection (DAI).
 ## II. Yêu cầu công cụ
 - Cisco IOSvL2: [https://drive.google.com/file/d/1QT7dqDeaQsTnzM7jD-_9ucr1p6mxLZh0/view](https://drive.google.com/file/d/1QT7dqDeaQsTnzM7jD-_9ucr1p6mxLZh0/view)
+- Kali Linux: [https://www.kali.org/get-kali/#kali-virtual-machines](https://www.kali.org/get-kali/#kali-virtual-machines)
 - Wireshark: [https://www.wireshark.org/download.html](https://www.wireshark.org/download.html)
 - Yersinia: [https://www.kali.org/tools/yersinia/](https://www.kali.org/tools/yersinia/)
 ## III. Nội dung thực hành
