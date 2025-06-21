@@ -20,4 +20,4 @@
 ### Using Components With Known Vulnerabilities
 ### Insufficient Logging & Monitoring
 ## Reference
-- https://github.com/dzokha1010/Documents/tree/main/PentestbWAPP
+- [https://drive.google.com/drive/folders/1Qrm-RRD5PwUYYmefRrYaRM9N6x3dDcds](https://drive.google.com/drive/folders/1Qrm-RRD5PwUYYmefRrYaRM9N6x3dDcds)
