@@ -235,6 +235,7 @@ Lưu ý: prefer ưu tiên server này nếu có nhiều server NTP.
   + Kiểm tra thời gian hệ thống:`R1#show clock detail #Thời gian trên Router R1 sẽ được đồng bộ với Ubuntu Server.`
 
 4. Cấu hình PAP
+![Model](Images/model_lab1a.png)
 a) Cấu hình IP cho các interface nối trực tiếp:
 - Cấu hình trên R1:
 ```
@@ -296,6 +297,7 @@ R2(config)#interface FastEthernet0/0
 R2(config-if)#no ppp pap sent-username R2_peer password cisco
 ```
 b) Cấu hình CHAP trên R1 (Authenticator) và R2 (Peer)
+
 Nguyên lý CHAP: Bên xác thực gửi một "thử thách" (challenge). Bên yêu cầu tính toán một giá trị băm (hash) dựa trên thử thách và mật khẩu bí mật, sau đó gửi "đáp ứng" (response) lại. Bên xác thực tự tính toán giá trị băm và so sánh. Mật khẩu không bao giờ được gửi qua mạng.
 
 Cấu hình trên R1 (Authenticator):
