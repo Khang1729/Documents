@@ -287,7 +287,7 @@ Tương tự, kiểm tra trạng thái "Line protocol is up" và "PPP is up".
 5. Cấu hình CHAP (Challenge-Handshake Authentication Protocol)
 a) Gỡ bỏ cấu hình PAP cũ trên R1 và R2: Trên R1:
 ```
-R1(config)#interface FastEthernet0/1
+R1(config)#interface serial1/0
 R1(config-if)#no ppp authentication pap
 ```
 Trên R2:
@@ -302,24 +302,25 @@ Nguyên lý CHAP: Bên xác thực gửi một "thử thách" (challenge). Bên 
 Cấu hình trên R1 (Authenticator):
 
 Tạo người dùng local cho R2: Username phải khớp, mật khẩu phải khớp.
-`R1(config)#username R2_peer password cisco # Password phải khớp với R2`
-Áp dụng xác thực CHAP trên interface:
 ```
-R1(config)#interface FastEthernet0/1
-R1(config-if)#ppp authentication chap
+R1(config)#hostname R1_auth
+R1_auth(config)username R2_peer password cisco # Password phải khớp với R2
+R1_auth(config)#interface serial1/0
+R1_auth(config-if)#ppp authentication chap
 ```
 Cấu hình trên R2 (Peer):
 
 Cấu hình gửi username cho CHAP:
 ```
-R2(config)#interface FastEthernet0/0
-R2(config-if)#ppp chap hostname R2_peer # Gửi hostname làm username trong CHAP
+R2(config)#hostname R2_peer
+R2_peer(config)#username R1_auth password cisco # Tạo username/password cho bên xác thực (R1_auth)
+R2_peer(config)#interface serial1/0
+R2_peer(config-if)#ppp chap hostname R2_peer # Gửi hostname làm username trong CHAP
+R2_peer(config-if)#ppp authentication chap
 ```
 Lưu ý: CHAP sử dụng hostname của peer làm username. Đảm bảo hostname trên R2 là R2_peer hoặc sử dụng lệnh ppp chap hostname để chỉ định username.
-```
-R2(config)#username R1_auth password cisco # Tạo username/password cho bên xác thực (R1_auth)
-```
-Lưu ý: Mật khẩu này (cisco) phải khớp với mật khẩu của username R2_peer trên R1. Điều này hơi phức tạp: mỗi bên cần có một mục nhập người dùng cục bộ cho bên kia, và mật khẩu của mục nhập đó phải khớp.
+
+Mật khẩu này (cisco) phải khớp với mật khẩu của username R2_peer trên R1. Điều này hơi phức tạp: mỗi bên cần có một mục nhập người dùng cục bộ cho bên kia, và mật khẩu của mục nhập đó phải khớp.
 Tóm tắt mật khẩu cho CHAP:
 
 Trên R1, có username R2_peer password cisco.
@@ -328,19 +329,16 @@ Mật khẩu "cisco" phải giống nhau ở cả hai phía để CHAP hoạt đ
 C. Kiểm tra CHAP
 Trên Router R1:
 ```
-R1#show interface FastEthernet0/1
+R1#show interface serial1/0
 Kiểm tra trạng thái "Line protocol is up", "PPP is up" và "LCP is up" và "authentication successful".
 ```
-```
-R1#show ppp all 
-#Sẽ hiển thị chi tiết trạng thái PPP, bao gồm CHAP.
-```
+
 ```
 R1#debug ppp authentication
 (Để xem quá trình xác thực CHAP diễn ra, sau đó tắt bằng no debug ppp authentication hoặc undebug all).
 ```
 
-Trên Router R2: `R2#show interface FastEthernet0/0 #Tương tự, kiểm tra trạng thái "Line protocol is up" và "PPP is up". `
+Trên Router R2: `R2#show interface serial1/0 #Tương tự, kiểm tra trạng thái "Line protocol is up" và "PPP is up". `
 
 ## VI. Lưu ý
 1. Lưu cấu hình: Sau mỗi phần thực hành, hãy nhớ lưu cấu hình trên các Router bằng lệnh `copy running-config startup-config ` để không bị mất khi khởi động lại.
