@@ -263,28 +263,25 @@ Cấu hình trên R1 (Authenticator):
 - Tạo người dùng local cho R2: Username và password này phải khớp với thông tin mà R2 sẽ gửi: `R1(config)#username R2_peer password cisco # Username R2_peer, password cisco`
 - Áp dụng xác thực PAP trên interface:
 ```
-R1(config)#interface FastEthernet0/1
+R1(config)#interface serial1/0
 R1(config-if)#ppp authentication pap
 ```
 Cấu hình trên R2 (Peer):
 - Cấu hình gửi username và password PAP:
 ```
-R2(config)#interface FastEthernet0/0
+R2(config)#interface serial1/0
 R2(config-if)#ppp pap sent-username R2_peer password cisco # Phải khớp với username/password trên R1
 ```
 c) Kiểm tra PAP
-- Trên Router R1: `R1#show interface FastEthernet0/1`
+- Trên Router R1: `R1#show interface serial1/0`
 Tìm dòng "Line protocol is up", "PPP is up" và "LCP is up" và "authentication successful".
-
-` R1#show ppp all`
-Sẽ hiển thị chi tiết trạng thái PPP, bao gồm PAP.
 
 `R1#debug ppp authentication`
 (Để xem quá trình xác thực PAP diễn ra, sau đó tắt bằng no debug ppp authentication hoặc undebug all).
 
 - Trên Router R2:
 
-`R2#show interface FastEthernet0/0`
+`R2#show interface serial1/0`
 Tương tự, kiểm tra trạng thái "Line protocol is up" và "PPP is up".
 
 5. Cấu hình CHAP (Challenge-Handshake Authentication Protocol)
