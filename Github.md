@@ -10,11 +10,11 @@
 ## Sao chép và đẩy mã nguồn lên kho lưu trữ
 - Step 1: Mở Command Prompt hoặc CMD trên Windows
 - Step 2: Thực hiện câu lệnh clone Repository: `git clone https://github.com/dzokha1010/<name_repository>.git`
-- Step 2: Di chuyển vào thư mục Repository: `cd <name_repository>`
-- Step 3: Tạo tập tin Word đặt tên là MSSV lưu trong thư mục <name_repository>, tập tin này sẻ lưu trữ kết quả mỗi buổi thực hành.
-- Step 4: Chụp hình kết quả thực hành từng bài tập và dán vào tập tin Word
-- Step 5: Chuyển nhánh: `git checkout student`
-- Step 6: Nộp tập tin Word sau buổi thực hành lên kho <name_repository> bằng các câu lệnh
+- Step 3: Di chuyển vào thư mục Repository: `cd <name_repository>`
+- Step 4: Tạo tập tin Word đặt tên là MSSV lưu trong thư mục <name_repository>, tập tin này sẻ lưu trữ kết quả mỗi buổi thực hành.
+- Step 5: Chụp hình kết quả thực hành từng bài tập và dán vào tập tin Word
+- Step 6: Chuyển nhánh: `git checkout student`
+- Step 7: Nộp tập tin Word sau buổi thực hành lên kho <name_repository> bằng các câu lệnh
   ```
   git add .  
   git commit -m "<ghi chú>"  
