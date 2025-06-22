@@ -14,7 +14,7 @@
 - Step 3: Tạo tập tin Word đặt tên là MSSV lưu trong thư mục <name_repository>, tập tin này sẻ lưu trữ kết quả mỗi buổi thực hành.
 - Step 4: Chụp hình kết quả thực hành từng bài tập và dán vào tập tin Word
 - Step 5: Chuyển nhánh: `git checkout student`
-- Step 5: Nộp tập tin Word sau buổi thực hành lên kho <name_repository> bằng các câu lệnh
+- Step 6: Nộp tập tin Word sau buổi thực hành lên kho <name_repository> bằng các câu lệnh
   ```
   git add .  
   git commit -m "<ghi chú>"  
