@@ -12,11 +12,11 @@
 - Hướng dẫn thực hành: [https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab3_AAA_DHCP_NAT_Wireless.md](https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab3_AAA_DHCP_NAT_Wireless.md)
 - Lab3 thực hành 01 buổi 4 tiết
 ### Lab4 - Site-to-Site-IPsec-VPN, CBAC
-- Hướng dẫn thực hành: 
+- Hướng dẫn thực hành: [https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab4_Site_to_Site_IPsec_VPN_CBAC.md](https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab4_Site_to_Site_IPsec_VPN_CBAC.md)
 - Lab4 thực hành 01 buổi 4 tiết
 ### Lab5 - Secure network
-- Hướng dẫn thực hành: 
+- Hướng dẫn thực hành: [https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab5_Secure_network.md](https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab5_Secure_network.md)
 - Lab5 thực hành 01 buổi 4 tiết
 ### Lab6 - Firewall Và IPS
-- Hướng dẫn thực hành: 
+- Hướng dẫn thực hành: [https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab6_Firewall_IPS.md](https://github.com/dzokha1010/Documents/blob/main/NetSec/Lab6_Firewall_IPS.md)
 - Lab6 thực hành 02 buổi 10 tiết
