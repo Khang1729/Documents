@@ -78,12 +78,17 @@ interface FastEthernet0/2
  switchport port-security mac-address sticky
 ```
 - Giải thích:
--- maximum 1: chỉ cho 1 MAC trên mỗi cổng.
-+ violation restrict: khi có MAC vi phạm, chặn truy cập, ghi log, không tắt cổng.
-+ mac-address sticky: switch tự học địa chỉ MAC đầu tiên và lưu lại.
+
+maximum 1: chỉ cho 1 MAC trên mỗi cổng.
+
+violation restrict: khi có MAC vi phạm, chặn truy cập, ghi log, không tắt cổng.
+
+mac-address sticky: switch tự học địa chỉ MAC đầu tiên và lưu lại.
 
 - Kiểm tra:`show port-security interface Fa0/1`
 - Tình huống thử nghiệm (đơn giản):
-+ Ngắt kết nối VPCS1 khỏi Fa0/1 → Kết nối lại VPCS3 vào Fa0/1.
-+ Nếu VPCS3 có MAC khác → switch sẽ chặn, không cho vào mạng.
+
+Ngắt kết nối VPCS1 khỏi Fa0/1 → Kết nối lại VPCS3 vào Fa0/1.
+
+Nếu VPCS3 có MAC khác → switch sẽ chặn, không cho vào mạng.
 
