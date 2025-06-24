@@ -11,132 +11,79 @@ Cấu hình Cisco IOSvL2
 - Mở GNS3 -> Edit -> References ... -> Qemu VMs -> New -> Run this Qemu VM on the GNS3 VM -> đặt tên bắt kỳ cho Switch ảo -> qemu-system-x86_64 -> Telnet -> New Image -> chọn đường dẫn đến file IOSvL2 tải về -> Finish
 ## IV. Mô hình mạng thực hành:
 ![Model](Images/model_lab2.png)
-2. Cấu hình VLAN và Trunk
-Trên Switch:
+## V. Nội dung thực hành
+1. Cấu hình Switch IOSvL2 (SW1)
+```
+enable
+conf t
 
-
-Tạo VLAN:
-
+! Tạo VLANs
 vlan 10
-name SALES
+ name SALES
 vlan 20
-name IT
+ name IT
 
-
-Gán cổng cho VLAN:
-
- kotlin
-CopyEdit
+! Gán cổng cho VPCS
 interface FastEthernet0/1
-switchport mode access
-switchport access vlan 10
+ switchport mode access
+ switchport access vlan 10
 
 interface FastEthernet0/2
-switchport mode access
-switchport access vlan 20
+ switchport mode access
+ switchport access vlan 20
 
-
-Cấu hình trunk giữa switch/router:
-
- kotlin
-CopyEdit
+! Cổng kết nối Router (Router-on-a-Stick)
 interface FastEthernet0/24
-switchport mode trunk
+ switchport trunk encapsulation dot1q
+ switchport mode trunk
+```
+2. Cấu hình IP trên VPCS
+- VPCS1 (VLAN 10): `ip 192.168.10.10/24 192.168.10.254`
+- VPCS2 (VLAN 20): `ip 192.168.20.10/24 192.168.20.254`
+3. Cấu hình Router:
+```
+enable
+conf t
 
+! Subinterface cho VLAN 10
+interface GigabitEthernet0/0.10
+ encapsulation dot1Q 10
+ ip address 192.168.10.1 255.255.255.0
 
-Trên Router (Router-on-a-Stick hoặc L3 Switch):
+! Subinterface cho VLAN 20
+interface GigabitEthernet0/0.20
+ encapsulation dot1Q 20
+ ip address 192.168.20.1 255.255.255.0
 
+! Bật cổng chính
+interface GigabitEthernet0/0
+ no shutdown
+```
+4. Kiểm tra kết nối (ping 2 VPCs được với nhau)
+5. Thêm bảo mật Layer 2
+- Cấu hình trên switch IOSvL2:
+```
+conf t
 
-Cấu hình subinterface:
-
- nginx
-CopyEdit
-interface Gig0/0.10
-encapsulation dot1Q 10
-ip address 192.168.10.1 255.255.255.0
-
-interface Gig0/0.20
-encapsulation dot1Q 20
-ip address 192.168.20.1 255.255.255.0
-
-
-Kiểm tra:
-
-
-Ping giữa các máy trong cùng VLAN và khác VLAN.
-
-
-
-Phần B: Thực hành tấn công và phòng thủ Layer 2
-B1. VLAN Hopping (Double Tagging)
-Thực hiện (trên Ubuntu cài yersinia):
-
- bash
-CopyEdit
-sudo yersinia -G
-
-
-Tạo gói tấn công double-tag VLAN.
-
-
-Phòng thủ:
-
-
-Trên Switch, tắt trunk không cần thiết và gán native VLAN không sử dụng:
-
- java
-CopyEdit
-switchport trunk allowed vlan 10,20
-switchport trunk native vlan 999
-vlan 999
-
-
-
-B2. MAC Flooding
-Thực hiện (trên máy tấn công dùng macof):
-
- bash
-CopyEdit
-sudo apt install dsniff
-sudo macof -i eth0
-
-
-Phòng thủ – Port Security:
-
- pgsql
-CopyEdit
 interface FastEthernet0/1
-switchport port-security
-switchport port-security maximum 1
-switchport port-security violation restrict
-switchport port-security mac-address sticky
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
 
+interface FastEthernet0/2
+ switchport port-security
+ switchport port-security maximum 1
+ switchport port-security violation restrict
+ switchport port-security mac-address sticky
+```
+- Giải thích:
++ maximum 1: chỉ cho 1 MAC trên mỗi cổng.
++ violation restrict: khi có MAC vi phạm, chặn truy cập, ghi log, không tắt cổng.
++ mac-address sticky: switch tự học địa chỉ MAC đầu tiên và lưu lại.
 
-
-B3. DHCP Spoofing
-Tấn công bằng dhcpstarv và rogue dhcp tools.
-
-
-Phòng thủ – DHCP Snooping:
-
- kotlin
-CopyEdit
-ip dhcp snooping
-ip dhcp snooping vlan 10,20
-interface FastEthernet0/24
-ip dhcp snooping trust
-
-
-
-B4. ARP Spoofing / MITM
-Dùng arpspoof để tấn công.
-
-
-Phòng thủ – Dynamic ARP Inspection (DAI):
-
- kotlin
-CopyEdit
-ip arp inspection vlan 10,20
-interface FastEthernet0/24
-ip arp inspection trust
+- Kiểm tra:`show port-security interface Fa0/1`
+- Tình huống thử nghiệm (đơn giản):
++ Ngắt kết nối VPCS1 khỏi Fa0/1 → Kết nối lại VPCS3 vào Fa0/1.
++ Nếu VPCS3 có MAC khác → switch sẽ chặn, không cho vào mạng.
 
