@@ -64,6 +64,7 @@ Destination Port: 80
 Redirect to: 192.168.20.10:80 (Web Server)
 
 → Tự động sinh rule trong Firewall > WAN
+
 4. Cấu hình Web Server (DMZ)
 Sử dụng Ubuntu hoặc VPCS để mô phỏng:
 ```
