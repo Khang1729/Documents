@@ -11,7 +11,7 @@
 ![Model](Images/model_lab6.png)
 ## IV. Nội dung thực hành
 1. Cấu hình cơ bản Tường lửa
-2. 
+
 Trên router hoặc firewall Cisco trong GNS3:
 
 a) Tạo access-list lọc lưu lượng:
