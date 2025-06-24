@@ -1,4 +1,4 @@
-Laboratory 3 - AAA, DHCP, NAT, Wireless
+# Laboratory 3 - AAA, DHCP, NAT, Wireless
 ## I. Giới thiệu
 - Hiểu và cấu hình mô hình xác thực AAA.
 - Triển khai máy chủ DHCP và cấu hình cấp phát IP động.
