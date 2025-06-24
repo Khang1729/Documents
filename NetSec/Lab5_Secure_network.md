@@ -10,6 +10,7 @@
 ## III. Cài đặt công cụ
 - giống như Cisco IOSvL2 trong Lab2
 ## IV. Mô hình
+![Model](Images/model_lab5.png)
 LAN (em1): 192.168.10.0/24
 
 DMZ (em2): 192.168.20.0/24
