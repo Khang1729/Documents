@@ -86,7 +86,7 @@ Switch(config-if)#exit
 ```
 - Trên router, tạo subinterface cho VLAN 20:
 ```
-R1(config)#interface Ethernet1/1.20
+R1(config)#interface Ethernet1/0.20
 R1(config-subif)#encapsulation dot1Q 20
 R1(config-subif)#ip address 192.168.20.1 255.255.255.0
 R1(config-subif)#no shutdown 
