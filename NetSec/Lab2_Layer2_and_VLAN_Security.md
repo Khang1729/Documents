@@ -58,14 +58,14 @@ R1#conf t
 ```
 R1(config)#interface FastEthernet0/0.10
 R1(config-subif)#encapsulation dot1Q 10
-R1(config-subif)#ip address 192.168.10.1 255.255.255.0
+R1(config-subif)#ip address 192.168.10.254 255.255.255.0
 R1(config-subif)#exit
 ```
 - Subinterface cho VLAN 20
 ```
 R1(config)#interface FastEthernet0/0.20
 R1(config-subif)#encapsulation dot1Q 20
-R1(config-subif)#ip address 192.168.20.1 255.255.255.0
+R1(config-subif)#ip address 192.168.20.254 255.255.255.0
 R1(config-subif)#exit
 ```
 -  Bật cổng chính
@@ -81,15 +81,15 @@ R1#write memory
 - Cấu hình trên switch IOSvL2:
 ```
 vIOS-L2-01#conf t
-vIOS-L2-01(config)#interface gigabitEthernet0/1
+vIOS-L2-01(config)#interface gigabitEthernet0/0
 vIOS-L2-01(config-if)#switchport mode access
-vIOS-L2-01(config-if)#switchport access  vlan 20
+vIOS-L2-01(config-if)#switchport access  vlan 10
 vIOS-L2-01(config-if)#switchport port-security
 vIOS-L2-01(config-if)#switchport port-security maximum 1
 vIOS-L2-01(config-if)#switchport port-security violation restrict
 vIOS-L2-01(config-if)#switchport port-security mac-address sticky
 
-vIOS-L2-01(config)#interface gigabitEthernet0/2
+vIOS-L2-01(config)#interface gigabitEthernet0/1
 vIOS-L2-01(config-if)#switchport mode access
 vIOS-L2-01(config-if)#switchport access  vlan 20
 vIOS-L2-01(config-if)#switchport port-security
