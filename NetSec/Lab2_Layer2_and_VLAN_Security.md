@@ -14,28 +14,37 @@ Cấu hình Cisco IOSvL2
 ## V. Nội dung thực hành
 1. Cấu hình Switch IOSvL2 (SW1)
 ```
-enable
-conf t
+vIOS-L2-01>enable
+vIOS-L2-01#conf t
+```
+- Tạo VLANs
+```
+vIOS-L2-01(config)#vlan 10
+vIOS-L2-01(config-vlan)#name SALES
+vIOS-L2-01(config-vlan)#exit
+vIOS-L2-01(config)#vlan 20
+vIOS-L2-01(config-vlan)#name IT
+vIOS-L2-01(config-vlan)#exit
+```
+- Gán cổng cho VPCS
+```
+vIOS-L2-01(config)#interface GigabitEthernet0/0
+vIOS-L2-01(config-if)#switchport mode access
+vIOS-L2-01(config-if)#switchport access vlan 10
+vIOS-L2-01(config-if)#exit
 
-! Tạo VLANs
-vlan 10
- name SALES
-vlan 20
- name IT
+vIOS-L2-01(config)#interface GigabitEthernet0/1
+vIOS-L2-01(config-if)#switchport mode access
+vIOS-L2-01(config-if)#switchport access vlan 20
+vIOS-L2-01(config-if)#exit
+```
+- Cổng kết nối Router (Router-on-a-Stick)
+```
+vIOS-L2-01(config)#interface GigabitEthernet0/2
+vIOS-L2-01(config-if)#switchport trunk encapsulation dot1q
+vIOS-L2-01(config-if)#switchport mode trunk
+vIOS-L2-01(config-if)#exit
 
-! Gán cổng cho VPCS
-interface FastEthernet0/1
- switchport mode access
- switchport access vlan 10
-
-interface FastEthernet0/2
- switchport mode access
- switchport access vlan 20
-
-! Cổng kết nối Router (Router-on-a-Stick)
-interface FastEthernet0/24
- switchport trunk encapsulation dot1q
- switchport mode trunk
 ```
 2. Cấu hình IP trên VPCS
 - VPCS1 (VLAN 10): `ip 192.168.10.10/24 192.168.10.254`
