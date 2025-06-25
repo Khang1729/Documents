@@ -51,20 +51,23 @@ vIOS-L2-01(config-if)#exit
 - VPCS2 (VLAN 20): `ip 192.168.20.10/24 192.168.20.254`
 3. Cấu hình Router:
 ```
-enable
-conf t
-
-! Subinterface cho VLAN 10
+R1#enable
+R1#conf t
+```
+- Subinterface cho VLAN 10
+```
 interface GigabitEthernet0/0.10
  encapsulation dot1Q 10
  ip address 192.168.10.1 255.255.255.0
-
-! Subinterface cho VLAN 20
+```
+- Subinterface cho VLAN 20
+```
 interface GigabitEthernet0/0.20
  encapsulation dot1Q 20
  ip address 192.168.20.1 255.255.255.0
-
-! Bật cổng chính
+```
+-  Bật cổng chính
+```
 interface GigabitEthernet0/0
  no shutdown
 ```
