@@ -101,7 +101,7 @@ violation restrict: khi có MAC vi phạm, chặn truy cập, ghi log, không t�
 
 mac-address sticky: switch tự học địa chỉ MAC đầu tiên và lưu lại.
 
-- Kiểm tra:`show port-security interface Fa0/1`
+- Kiểm tra:`vIOS-L2-01#show port-security interface gigabitEthernet0/1`
 - Tình huống thử nghiệm (đơn giản):
 
 Ngắt kết nối VPCS1 khỏi Fa0/1 → Kết nối lại VPCS3 vào Fa0/1.
