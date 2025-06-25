@@ -83,6 +83,14 @@ Switch(config-if)#switchport mode access
 Switch(config-if)#switchport access vlan 20
 Switch(config-if)#no shutdown 
 Switch(config-if)#exit
+
+Switch(config)#interface gigabitEthernet0/1
+Switch(config-if)#switchport trunk encapsulation dot1q 
+Switch(config-if)#switchport mode trunk 
+Switch(config-if)#no shutdown 
+Switch(config-if)#exit 
+Switch(config)#end
+
 ```
 - Trên router, tạo subinterface cho VLAN 20:
 ```
