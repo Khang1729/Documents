@@ -31,11 +31,13 @@ vIOS-L2-01(config-vlan)#exit
 vIOS-L2-01(config)#interface GigabitEthernet0/0
 vIOS-L2-01(config-if)#switchport mode access
 vIOS-L2-01(config-if)#switchport access vlan 10
+vIOS-L2-01(config-if)# no shutdown
 vIOS-L2-01(config-if)#exit
 
 vIOS-L2-01(config)#interface GigabitEthernet0/1
 vIOS-L2-01(config-if)#switchport mode access
 vIOS-L2-01(config-if)#switchport access vlan 20
+vIOS-L2-01(config-if)# no shutdown
 vIOS-L2-01(config-if)#exit
 ```
 - Cổng kết nối Router (Router-on-a-Stick)
@@ -43,6 +45,7 @@ vIOS-L2-01(config-if)#exit
 vIOS-L2-01(config)#interface GigabitEthernet0/2
 vIOS-L2-01(config-if)#switchport trunk encapsulation dot1q
 vIOS-L2-01(config-if)#switchport mode trunk
+vIOS-L2-01(config-if)# no shutdown
 vIOS-L2-01(config-if)#exit
 
 ```
