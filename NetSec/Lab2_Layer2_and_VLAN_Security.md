@@ -56,20 +56,25 @@ R1#conf t
 ```
 - Subinterface cho VLAN 10
 ```
-interface GigabitEthernet0/0.10
- encapsulation dot1Q 10
- ip address 192.168.10.1 255.255.255.0
+R1(config)#interface FastEthernet0/0.10
+R1(config-subif)#encapsulation dot1Q 10
+R1(config-subif)#ip address 192.168.10.1 255.255.255.0
+R1(config-subif)#exit
 ```
 - Subinterface cho VLAN 20
 ```
-interface GigabitEthernet0/0.20
- encapsulation dot1Q 20
- ip address 192.168.20.1 255.255.255.0
+R1(config)#interface FastEthernet0/0.20
+R1(config-subif)#encapsulation dot1Q 20
+R1(config-subif)#ip address 192.168.20.1 255.255.255.0
+R1(config-subif)#exit
 ```
 -  Bật cổng chính
 ```
-interface GigabitEthernet0/0
- no shutdown
+R1(config)#interface FastEthernet0/0
+R1(config-if)#no shutdown
+R1(config-if)#exit
+R1(config)#end
+R1#write memory
 ```
 4. Kiểm tra kết nối (ping 2 VPCs được với nhau)
 5. Thêm bảo mật Layer 2
