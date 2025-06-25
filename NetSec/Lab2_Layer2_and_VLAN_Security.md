@@ -82,12 +82,16 @@ R1#write memory
 ```
 vIOS-L2-01#conf t
 vIOS-L2-01(config)#interface gigabitEthernet0/1
+vIOS-L2-01(config-if)#switchport mode access
+vIOS-L2-01(config-if)#switchport access  vlan 20
 vIOS-L2-01(config-if)#switchport port-security
 vIOS-L2-01(config-if)#switchport port-security maximum 1
 vIOS-L2-01(config-if)#switchport port-security violation restrict
 vIOS-L2-01(config-if)#switchport port-security mac-address sticky
 
 vIOS-L2-01(config)#interface gigabitEthernet0/2
+vIOS-L2-01(config-if)#switchport mode access
+vIOS-L2-01(config-if)#switchport access  vlan 20
 vIOS-L2-01(config-if)#switchport port-security
 vIOS-L2-01(config-if)#switchport port-security maximum 1
 vIOS-L2-01(config-if)#switchport port-security violation restrict
