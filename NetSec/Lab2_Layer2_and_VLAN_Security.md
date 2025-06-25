@@ -80,19 +80,18 @@ R1#write memory
 5. Thêm bảo mật Layer 2
 - Cấu hình trên switch IOSvL2:
 ```
-conf t
+vIOS-L2-01#conf t
+vIOS-L2-01(config)#interface gigabitEthernet0/1
+vIOS-L2-01(config-if)#switchport port-security
+vIOS-L2-01(config-if)#switchport port-security maximum 1
+vIOS-L2-01(config-if)#switchport port-security violation restrict
+vIOS-L2-01(config-if)#switchport port-security mac-address sticky
 
-interface FastEthernet0/1
- switchport port-security
- switchport port-security maximum 1
- switchport port-security violation restrict
- switchport port-security mac-address sticky
-
-interface FastEthernet0/2
- switchport port-security
- switchport port-security maximum 1
- switchport port-security violation restrict
- switchport port-security mac-address sticky
+vIOS-L2-01(config)#interface gigabitEthernet0/2
+vIOS-L2-01(config-if)#switchport port-security
+vIOS-L2-01(config-if)#switchport port-security maximum 1
+vIOS-L2-01(config-if)#switchport port-security violation restrict
+vIOS-L2-01(config-if)#switchport port-security mac-address sticky
 ```
 - Giải thích:
 
