@@ -47,6 +47,8 @@ vIOS-L2-01(config-if)#switchport trunk encapsulation dot1q
 vIOS-L2-01(config-if)#switchport mode trunk
 vIOS-L2-01(config-if)#no shutdown
 vIOS-L2-01(config-if)#exit
+vIOS-L2-01(config)#end
+vIOS-L2-01#write memory
 
 ```
 2. Cấu hình IP trên VPCS
@@ -91,6 +93,8 @@ vIOS-L2-01(config-if)#switchport port-security
 vIOS-L2-01(config-if)#switchport port-security maximum 1
 vIOS-L2-01(config-if)#switchport port-security violation restrict
 vIOS-L2-01(config-if)#switchport port-security mac-address sticky
+vIOS-L2-01(config-if)#no shutdown
+vIOS-L2-01(config-if)#exit
 
 vIOS-L2-01(config)#interface gigabitEthernet0/1
 vIOS-L2-01(config-if)#switchport mode access
@@ -99,6 +103,8 @@ vIOS-L2-01(config-if)#switchport port-security
 vIOS-L2-01(config-if)#switchport port-security maximum 1
 vIOS-L2-01(config-if)#switchport port-security violation restrict
 vIOS-L2-01(config-if)#switchport port-security mac-address sticky
+vIOS-L2-01(config-if)#no shutdown
+vIOS-L2-01(config-if)#exit
 ```
 - Giải thích:
 
